@@ -1,0 +1,29 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: vault
+  namespace: openshift-gitops
+spec:
+  project: ocpsuperapp-dev
+  source:
+    repoURL: https://helm.releases.hashicorp.com
+    chart: vault
+    targetRevision: 0.31.0
+    helm:
+      parameters:
+        - name: global.namespace
+          value: ocs-storagecluster-ceph-rbd
+        - name: server.dataStorage.storageClass
+          value: ocs-storagecluster-ceph-rbd
+        - name: server.dataStorage.size
+          value: 50Gi
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: ocpsuperapp-dev
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+      - ServerSideApply=true
