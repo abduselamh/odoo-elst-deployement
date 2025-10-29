@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: cbe-superapp-dev
+spec:
+  sourceRepos:
+  - '*'
+  destinations:
+  - namespace: 'ocpsuperapp-dev'
+    server: '*'
+  - namespace: 'ocpsuperapp-uat'
+    server: '*'
+  clusterResourceWhitelist:
+  - group: '*'
+    kind: '*'
+    
