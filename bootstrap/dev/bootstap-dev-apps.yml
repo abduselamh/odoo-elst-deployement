@@ -1,0 +1,21 @@
+# bootstrap/root-app.yaml
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: superapp-bootstrap-dev
+  namespace: openshift-gitops
+spec:
+  project: cbe-superapp-dev
+  sources:
+    - repoURL: https://gitlab.cbe.com.et/NatnaelTadesse/cbe-superapp-deployment.git
+      targetRevision: master
+      path: argocd/apps/environments/dev        
+      directory:
+        recurse: true
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: openshift-gitops
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

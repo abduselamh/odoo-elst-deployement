@@ -4,7 +4,7 @@ metadata:
   name: vault
   namespace: openshift-gitops
 spec:
-  project: ocpsuperapp-dev
+  project: cbe-superapp-dev
   source:
     repoURL: https://helm.releases.hashicorp.com
     chart: vault
