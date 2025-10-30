@@ -11,6 +11,8 @@ spec:
     server: '*'
   - namespace: 'ocpsuperapp-uat'
     server: '*'
+  - namespace: 'openshift-gitops'
+    server: '*'
   clusterResourceWhitelist:
   - group: '*'
     kind: '*'
