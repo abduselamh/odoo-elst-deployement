@@ -4,7 +4,7 @@ metadata:
   name: vault
   namespace: openshift-gitops
 spec:
-  project: ocpsuperapp-dev
+  project: cbe-superapp-dev
   source:
     repoURL: https://helm.releases.hashicorp.com
     chart: vault
@@ -12,11 +12,16 @@ spec:
     helm:
       parameters:
         - name: global.namespace
-          value: ocs-storagecluster-ceph-rbd
+          value: ocpsuperapp-dev
         - name: server.dataStorage.storageClass
           value: ocs-storagecluster-ceph-rbd
         - name: server.dataStorage.size
           value: 50Gi
+        - name: csi.agent.securityContext.container.runAsUser
+          value: "1000780000"
+        - name: csi.agent.securityContext.container.runAsGroup
+          value: "1000780000"
+
   destination:
     server: https://kubernetes.default.svc
     namespace: ocpsuperapp-dev
