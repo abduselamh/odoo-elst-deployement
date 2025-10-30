@@ -12,6 +12,7 @@ spec:
       path: k8s-manifests/overlays/dev/redis     
       directory: 
         recurse: false
+      kustomize: {}
   destination:
     server: https://kubernetes.default.svc
     namespace: ocpsuperapp-dev
