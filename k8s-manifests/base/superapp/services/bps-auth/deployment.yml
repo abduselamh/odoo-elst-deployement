@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bps-auth
+  labels:
+    app:  bps-auth
+    project: cbe-superapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app:  bps-auth
+  template:
+    metadata:
+      labels:
+        app:  bps-auth
+        project: cbe-superapp
+    spec:
+      imagePullSecrets:
+        - name: regcred 
+      containers:
+      - name:  elst
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/bps-auth-dev:latest
+        imagePullPolicy: Always
+        ports:
+          - containerPort: 8080
+        envFrom:
+          - configMapRef:
+              name: superapp-env-configmap
+        # resources:
+        #   requests:
+        #     memory: "512Mi"
+        #     cpu: "500m"
+        #   limits:
+        #     memory: "1Gi"
+        #     cpu: "1000m"

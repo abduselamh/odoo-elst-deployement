@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata: 
+  name: connect-env-configmap
+  namespace: connect-stg
+data:
+  VAULT_ADDR: ""
+  VAULT_TOKEN: ""
+  VAULT_PATH: ""

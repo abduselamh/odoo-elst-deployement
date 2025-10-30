@@ -3,7 +3,7 @@ kind: Kustomization
 namespace: ocpsuperapp-dev
 
 resources:
-  - ../../../base/redis
+  - ../../../base/superapp/services/bps-auth
 
 
 patches:

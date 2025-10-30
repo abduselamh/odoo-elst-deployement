@@ -10,8 +10,8 @@ spec:
     - repoURL: https://gitlab.cbe.com.et/NatnaelTadesse/cbe-superapp-deployment.git
       targetRevision: master
       path: k8s-manifests/overlays/dev/redis     
-      directory: 
-        recurse: false
+      # directory: 
+      #   recurse: false
       kustomize: {}
   destination:
     server: https://kubernetes.default.svc
