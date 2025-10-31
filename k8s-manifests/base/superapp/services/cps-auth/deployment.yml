@@ -19,7 +19,7 @@ spec:
       imagePullSecrets:
         - name: regcred 
       containers:
-      - name:  elst
+      - name:  cps-auth
         image: superapp-registry.cbe.com.et:5000/cbe-superapp/cps-auth-dev:latest
         imagePullPolicy: Always
         ports:

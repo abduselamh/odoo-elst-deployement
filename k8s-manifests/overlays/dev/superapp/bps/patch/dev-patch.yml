@@ -6,6 +6,8 @@ spec:
   replicas: 1
   template:
     spec:
+      imagePullSecrets:
+        - name: regcred
       containers:
       - name: bps-auth
         image: superapp-registry.cbe.com.et:5000/cbe-superapp/bps-auth-dev:latest
