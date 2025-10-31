@@ -3,10 +3,10 @@ kind: Kustomization
 namespace: ocpsuperapp-dev
 
 resources:
-  - ../../../base/redis
+  - ../../../../base/superapp/services/cps-auth
 
 
 patches:
-  - path: patchs/dev-patch.yml
+  - path: patch/dev-patch.yml
 
 nameSuffix: -dev
