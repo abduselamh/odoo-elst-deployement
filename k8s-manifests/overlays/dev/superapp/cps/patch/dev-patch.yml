@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: cps-auth
+  name: member-auth
 spec:
   replicas: 1
   template:
