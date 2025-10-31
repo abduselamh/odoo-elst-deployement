@@ -2,7 +2,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: superapp-cps-dev
+  name: superapp-client-dev
   namespace: openshift-gitops
 spec:
   project: cbe-superapp-dev
