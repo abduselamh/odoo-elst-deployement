@@ -24,9 +24,10 @@ spec:
         imagePullPolicy: Always
         ports:
           - containerPort: 8080
-        envFrom:
-          - configMapRef:
-              name: superapp-env-configmap
+        volumeMounts:
+          - name: env-config-volume
+            mountPath: /app/.env
+            subPath: .env
         # resources:
         #   requests:
         #     memory: "512Mi"
@@ -34,3 +35,7 @@ spec:
         #   limits:
         #     memory: "1Gi"
         #     cpu: "1000m"
+    volumes:
+      - name: env-config-volume
+        configMap:
+          name: superapp-env-configmap
