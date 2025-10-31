@@ -9,7 +9,7 @@ spec:
       imagePullSecrets:
         - name: regcred
       containers:
-      - name: cps-auth
+      - name: member-auth
         image: superapp-registry.cbe.com.et:5000/cbe-superapp/member-auth-dev:latest
         imagePullPolicy: Always
         
