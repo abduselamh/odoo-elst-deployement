@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: member-auth
+  name: cps-auth
 spec:
   replicas: 1
   template:
@@ -9,6 +9,6 @@ spec:
       imagePullSecrets:
         - name: regcred
       containers:
-      - name: member-auth
-        image: superapp-registry.cbe.com.et:5000/cbe-superapp/member-auth-dev:latest
+      - name: cps-auth
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/cps-auth-dev:latest
         imagePullPolicy: Always
