@@ -4,6 +4,8 @@ namespace: ocpsuperapp-dev
 
 resources:
   - ../../../../base/superapp/services/cps-auth
+  - ../../../../base/superapp/services/cps-action
+
 
 
 patches:
