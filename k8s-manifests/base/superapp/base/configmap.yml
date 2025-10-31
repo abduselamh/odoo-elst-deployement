@@ -1,8 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata: 
-  name: connect-env-configmap
-  namespace: connect-stg
+  name: superapp-env-configmap
 data:
   VAULT_ADDR: ""
   VAULT_TOKEN: ""
