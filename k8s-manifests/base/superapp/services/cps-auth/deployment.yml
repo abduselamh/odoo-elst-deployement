@@ -24,10 +24,10 @@ spec:
         imagePullPolicy: Always
         ports:
           - containerPort: 8080
-        volumeMounts:
-          - name: env-config-volume
-            mountPath: /app/.env
-            subPath: .env
+      volumeMounts:
+        - name: env-config-volume
+          mountPath: /app/.env
+          subPath: .env
         # resources:
         #   requests:
         #     memory: "512Mi"
