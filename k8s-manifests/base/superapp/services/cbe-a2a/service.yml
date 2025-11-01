@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: member-auth
+  name: cbe-a2a
   labels:
-    app: member-auth
+    app: cbe-a2a
 spec:
   selector:
-    app: member-auth
+    app: cbe-a2a
   ports:
     - port: 80
       targetPort: 8080
