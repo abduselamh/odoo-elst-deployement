@@ -8,7 +8,7 @@ resources:
   - ../../../../base/superapp/services/cbe-a2a
   - ../../../../base/superapp/services/cbe-to-cbe
   - ../../../../base/superapp/services/cbe-to-wallet
-  - ../../../../base/superapp/services/chart
+  - ../../../../base/superapp/services/chat
   - ../../../../base/superapp/services/common
   - ../../../../base/superapp/services/donation
   - ../../../../base/superapp/services/equb
