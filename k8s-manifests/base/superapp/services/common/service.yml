@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: common-api
+  labels:
+    app: common-api
+spec:
+  selector:
+    app: common-api
+  ports:
+    - port: 80
+      targetPort: 8080
+      protocol: TCP
+  type: ClusterIP

@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: three-click-order
+  labels:
+    app: three-click-order
+spec:
+  selector:
+    app: three-click-order
+  ports:
+    - port: 80
+      targetPort: 8080
+      protocol: TCP
+  type: ClusterIP
