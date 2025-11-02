@@ -5,9 +5,18 @@ namespace: ocpsuperapp-dev
 resources:
   - ../../../../base/superapp/services/bps-auth
   - ../../../../base/superapp/services/bps-action
+  - ../../../../base/superapp/router
 
 
 patches:
   - path: patch/dev-patch.yml
+  - path: patch/router-patch.yml
+
+nameReferences:
+- kind: Route
+  fieldSpecs:
+  - path: metadata/name
+    kind: Route
+    newName: bps-auth
 
 nameSuffix: -dev
