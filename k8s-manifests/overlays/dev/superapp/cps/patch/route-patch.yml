@@ -19,7 +19,7 @@ spec:
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
-  name: bps-action-route
+  name: cps-action-route
   namespace: ocpsuperapp-dev
 spec:
   path: /api/v1/cbesuperapp/cps_action
