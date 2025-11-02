@@ -165,6 +165,7 @@ spec:
       7aj3EZuX2H/rWdi/gpuysliEYwn/p1MxHTpTIetEiCtiykAHo4z7Nqan70UkcyXx
       B54YoIk+VXQ9QzYMgXpBbCw2exbhh+/H/jOm0iZvjDFxd9we/vnLYJC6fQ==
       -----END CERTIFICATE-----
-    insecureEdgeTerminationPolicy: Redirect  port:
+    insecureEdgeTerminationPolicy: Redirect  
+  port:
     targetPort: 8080
   alternateBackends: []
