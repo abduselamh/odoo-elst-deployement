@@ -3,7 +3,7 @@ kind: Kustomization
 namespace: ocpsuperapp-dev
 
 resources:
-  - ../../../router
+  - ../../../../router
 
 
 patches:
