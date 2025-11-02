@@ -3,12 +3,11 @@ kind: Kustomization
 namespace: ocpsuperapp-dev
 
 resources:
-  - ../../../../base/superapp/services/bps-auth
-  - ../../../../base/superapp/services/bps-action
+  - ../../../router
 
 
 patches:
   - path: patch/dev-patch.yml
   - path: patch/router-patch.yml
 
-nameSuffix: -dev
+namePrefix: bps-auth-
