@@ -9,6 +9,6 @@ resources:
 
 patches:
   - path: patch/dev-patch.yml
-  - path: patch/router-patch.yml
+  - path: patch/route-patch.yml
 
 nameSuffix: -dev

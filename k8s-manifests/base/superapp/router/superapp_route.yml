@@ -11,6 +11,7 @@ spec:
     kind: Service
   host: devapi.superapp.cbe..com.et
   tls:
+    termination: reencrypt
     certificate: |
       Bag Attributes
           localKeyID: 01 00 00 00 
@@ -61,8 +62,7 @@ spec:
       7aj3EZuX2H/rWdi/gpuysliEYwn/p1MxHTpTIetEiCtiykAHo4z7Nqan70UkcyXx
       B54YoIk+VXQ9QzYMgXpBbCw2exbhh+/H/jOm0iZvjDFxd9we/vnLYJC6fQ==
       -----END CERTIFICATE-----
-    insecureEdgeTerminationPolicy: Redirect
-    key: |
+    key: |-
       -----BEGIN PRIVATE KEY-----
       MIIJQwIBADANBgkqhkiG9w0BAQEFAASCCS0wggkpAgEAAoICAQDJ6gn1oB1Y2IJt
       7i4Bvh8fbIYZ7fxf+9e1+8l22jgk/k7MvrZWr673S745RlsrL1aoO+fuOMl2XZNy
@@ -115,7 +115,56 @@ spec:
       jITPeyqO7iJXqGBZlL4eLzc4mOXkz3PpcnVE0Ujkd9+ZbVUcxlzxMgodjUGQh2TN
       /7Nxf8UdlT2KTQhGi6m4TZWmGypgMUI=
       -----END PRIVATE KEY-----
-    termination: edge
-  port:
+    caCertificate: |
+      Bag Attributes
+          localKeyID: 01 00 00 00 
+          friendlyName: CBE Certificate 2025
+      subject=C = ET, L = Addis Ababa, O = Commercial Bank of Ethiopia, CN = *.cbe.com.et
+      issuer=C = US, O = DigiCert Inc, CN = DigiCert Global G2 TLS RSA SHA256 2020 CA1
+      -----BEGIN CERTIFICATE-----
+      MIIH1zCCBr+gAwIBAgIQCsCSfc0bNC9zeR+2nA5qCDANBgkqhkiG9w0BAQsFADBZ
+      MQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMTMwMQYDVQQDEypE
+      aWdpQ2VydCBHbG9iYWwgRzIgVExTIFJTQSBTSEEyNTYgMjAyMCBDQTEwHhcNMjUw
+      MzE4MDAwMDAwWhcNMjYwMzE2MjM1OTU5WjBgMQswCQYDVQQGEwJFVDEUMBIGA1UE
+      BxMLQWRkaXMgQWJhYmExJDAiBgNVBAoTG0NvbW1lcmNpYWwgQmFuayBvZiBFdGhp
+      b3BpYTEVMBMGA1UEAwwMKi5jYmUuY29tLmV0MIICIjANBgkqhkiG9w0BAQEFAAOC
+      Ag8AMIICCgKCAgEAyeoJ9aAdWNiCbe4uAb4fH2yGGe38X/vXtfvJdto4JP5OzL62
+      Vq+u90u+OUZbKy9WqDvn7jjJdl2Tcsrg5sm07oVmSEvmwon9pS2YiKlvRTi8OxW3
+      89YwNxVxQG1XGJ0ohpUx5yWnU25zP/h+AyYaA+h1rEkosLkZQ3KgZ/siWFWlBkpE
+      VYsBXQzwK0yTsciBJ1oybBshC4ejMeO8uX8r/6Pvr5rajWFVh+DdSYmvzRKOm0j+
+      CwhbSAb6cVSy8IOmi7QfJocF/E6Kna+cheFhoNAYDLRgr1NK0VsPRTPXOhQwGRIm
+      yUf3dfxd00/f7erNrUJx4yy5q/Fg/FDtFq99ag+lvdDPVAJajcs12oVdn+m2ublq
+      YH1PdstcJ6duYYMF7gI10vjcTLEkDduIQ7BdfTIYXXEOlHl3D7Ll8pYEceEw+C+i
+      RO1jiHNfKXgiAXAYUgz5wYPZihioAUbS1Ir2qppYvwXXYs4RshqUsajg8Z0W7+hF
+      eIM8Nb1jrgRTDFomWSzACp9ZXT2Sk9fzzyJgjUd4JUaeR34iUtE13dJvwum89JI6
+      OQHppJOgVVca5NxuwhGPMFgGCWgwBDw1BHxEzfnHtfxfRQz0SAoza5nYUjlH9D0B
+      8pycLmtAjehvh0CcImuP/l/A9yNQINcQ/ab4bE7GlfoKTxRffDPbfgDLbTUCAwEA
+      AaOCA5IwggOOMB8GA1UdIwQYMBaAFHSFgMBmx9833s+9KTeqAx2+7c0XMB0GA1Ud
+      DgQWBBQVXejX+GDJkom/VgASH/efAASPpzAjBgNVHREEHDAaggwqLmNiZS5jb20u
+      ZXSCCmNiZS5jb20uZXQwPgYDVR0gBDcwNTAzBgZngQwBAgIwKTAnBggrBgEFBQcC
+      ARYbaHR0cDovL3d3dy5kaWdpY2VydC5jb20vQ1BTMA4GA1UdDwEB/wQEAwIFoDAd
+      BgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwgZ8GA1UdHwSBlzCBlDBIoEag
+      RIZCaHR0cDovL2NybDMuZGlnaWNlcnQuY29tL0RpZ2lDZXJ0R2xvYmFsRzJUTFNS
+      U0FTSEEyNTYyMDIwQ0ExLTEuY3JsMEigRqBEhkJodHRwOi8vY3JsNC5kaWdpY2Vy
+      dC5jb20vRGlnaUNlcnRHbG9iYWxHMlRMU1JTQVNIQTI1NjIwMjBDQTEtMS5jcmww
+      gYcGCCsGAQUFBwEBBHsweTAkBggrBgEFBQcwAYYYaHR0cDovL29jc3AuZGlnaWNl
+      cnQuY29tMFEGCCsGAQUFBzAChkVodHRwOi8vY2FjZXJ0cy5kaWdpY2VydC5jb20v
+      RGlnaUNlcnRHbG9iYWxHMlRMU1JTQVNIQTI1NjIwMjBDQTEtMS5jcnQwDAYDVR0T
+      AQH/BAIwADCCAXwGCisGAQQB1nkCBAIEggFsBIIBaAFmAHYAlpdkv1VYl633Q4do
+      NwhCd+nwOtX2pPM2bkakPw/KqcYAAAGVqRa1vQAABAMARzBFAiASiGYauXVxTe5o
+      6FhOwy9s7Q/weCTPY55hw47AXPPMeAIhALTJQYJZbm6y2SOK1YKmC2+N1bJWLtZY
+      ILU/aSfbFY8IAHUAZBHEbKQS7KeJHKICLgC8q08oB9QeNSer6v7VA8l9zfAAAAGV
+      qRa1rgAABAMARjBEAiAbLOnR7J/fH/8XDSXRDwNqno0uMNjV+vhvwiwyEpZoAwIg
+      HCp1jrN9cKh8Ey0IixPl3SZqQUrcbybF/AbBW6zRzWIAdQBJnJtp3h187Pw23s2H
+      ZKa4W68Kh4AZ0VVS++nrKd34wwAAAZWpFrXEAAAEAwBGMEQCIEQg6UYjQEgyk3/R
+      oCC3j0YH+e910EWTrSaNCd4qWdUmAiAEIuWpEj84Ck5zizwaBa3zL59HhlFVyF55
+      /MJ4kpHzVzANBgkqhkiG9w0BAQsFAAOCAQEAf1DCmpinVL1lr+gQHnZuFiR0Wx+c
+      0Ra2SaNZEfMKKemjmIFv+0UIHF6vo5pHS8E6Lfs9mkO+2PHLu4xJbxyBpnY8VtLC
+      xE4DvMAN618A4CzuR+ej4ymgJ02O851WEXBnUCRDrC+mAwucpQPtG9MmkylYOdRe
+      wGYJaUgpRurX2LtVVZfYuWU8f1lqxYk/ovgy0mr9ubxJ3y6l1R3Zm/J0FNyAcdHS
+      7aj3EZuX2H/rWdi/gpuysliEYwn/p1MxHTpTIetEiCtiykAHo4z7Nqan70UkcyXx
+      B54YoIk+VXQ9QzYMgXpBbCw2exbhh+/H/jOm0iZvjDFxd9we/vnLYJC6fQ==
+      -----END CERTIFICATE-----
+    insecureEdgeTerminationPolicy: Redirect  port:
     targetPort: 8080
   alternateBackends: []
