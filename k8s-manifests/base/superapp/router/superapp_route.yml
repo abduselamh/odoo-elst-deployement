@@ -11,7 +11,7 @@ spec:
     kind: Service
   host: devapisuperapp.cbe..com.et
   tls:
-    termination: reencrypt
+    termination: edge
     certificate: |
       Bag Attributes
           localKeyID: 01 00 00 00 
