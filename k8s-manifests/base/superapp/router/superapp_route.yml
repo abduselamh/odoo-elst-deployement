@@ -9,7 +9,7 @@ spec:
     name: transaction-dev
     weight: 100
     kind: Service
-  host: devapi.superapp.cbe..com.et
+  host: devapisuperapp.cbe..com.et
   tls:
     termination: reencrypt
     certificate: |
