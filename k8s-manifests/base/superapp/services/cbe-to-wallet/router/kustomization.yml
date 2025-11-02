@@ -5,4 +5,4 @@ namespace: ocpsuperapp-dev
 resources:
   - ../../../router
 
-namePrefix: cbe-wallet-
+namePrefix: cbe-to-wallet-
