@@ -9,7 +9,7 @@ spec:
     name: transaction-dev
     weight: 100
     kind: Service
-  host: devapisuperapp.cbe..com.et
+  host: devapisuperapp.cbe.com.et
   tls:
     termination: edge
     certificate: |
@@ -168,4 +168,3 @@ spec:
     insecureEdgeTerminationPolicy: Redirect  
   port:
     targetPort: 8080
-  alternateBackends: []

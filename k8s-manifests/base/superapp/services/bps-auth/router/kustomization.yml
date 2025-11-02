@@ -5,9 +5,4 @@ namespace: ocpsuperapp-dev
 resources:
   - ../../../router
 
-
-patches:
-  - path: patch/dev-patch.yml
-  - path: patch/router-patch.yml
-
 namePrefix: bps-auth-

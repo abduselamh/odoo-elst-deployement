@@ -12,4 +12,21 @@ spec:
   host: devapisuperapp.cbe.com.et
   port:
     targetPort: 8080
-  alternateBackends: []
+
+
+---
+
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: bps-action-route
+  namespace: ocpsuperapp-dev
+spec:
+  path: /api/v1/cbesuperapp/bps_action
+  to:
+    name: bps-action-dev
+    weight: 100
+    kind: Service
+  host: devapisuperapp.cbe.com.et
+  port:
+    targetPort: 8080
