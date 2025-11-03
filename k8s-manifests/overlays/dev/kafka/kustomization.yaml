@@ -1,0 +1,14 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+metadata:
+  name: kafka-dev
+namespace: ocpsuperapp-dev
+
+resources:
+  - ../../../base/kafka
+
+
+# patches:
+#   - path: patch/dev-patch.yml
+
+nameSuffix: -dev
