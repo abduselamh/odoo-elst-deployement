@@ -4,7 +4,7 @@ metadata:
   name: cps-auth-route
   namespace: ocpsuperapp-dev
 spec:
-  path: /api/v1/cbesuperapp/bps_auth
+  path: /api/v1/cbesuperapp/cps_auth
   to:
     name: cps-auth-dev
     weight: 100

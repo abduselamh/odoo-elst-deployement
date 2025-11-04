@@ -176,7 +176,7 @@ metadata:
   name: exchange-rate-route
   namespace: ocpsuperapp-dev
 spec:
-  path: /api/v1/cbesuperapp/equb
+  path: /api/v1/cbesuperapp/exchange_rate
   to:
     name: exchange-rate-dev
     weight: 100
