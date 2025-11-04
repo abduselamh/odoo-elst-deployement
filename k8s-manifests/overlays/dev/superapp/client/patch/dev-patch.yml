@@ -14,6 +14,23 @@ spec:
         imagePullPolicy: Always
 
 ---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: member-user
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: member-user
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/member-user-dev:latest
+        imagePullPolicy: Always
+
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
