@@ -264,7 +264,7 @@ spec:
       imagePullSecrets:
         - name: regcred
       containers:
-      - name: pdf-ser
+      - name: pdf-server
         image: superapp-registry.cbe.com.et:5000/cbe-superapp/pdf-server-dev:latest
         imagePullPolicy: Always
 
