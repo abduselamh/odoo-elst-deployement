@@ -21,7 +21,7 @@ metadata:
   name: member-user-route
   namespace: ocpsuperapp-dev
 spec:
-  path: /api/v1/cbesuperapp/member_user
+  path: /api/v1/cbesuperapp/member_users
   to:
     name: member-user-dev
     weight: 100
