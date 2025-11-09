@@ -35,7 +35,7 @@ kind: Deployment
 metadata:
   name: api-proxy
 spec:
-  replicas: 1
+  replicas: 5
   template:
     spec:
       imagePullSecrets:
