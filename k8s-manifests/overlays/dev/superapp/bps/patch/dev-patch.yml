@@ -44,3 +44,20 @@ spec:
       - name: api-proxy
         image: superapp-registry.cbe.com.et:5000/cbe-superapp/api-proxy-dev:latest
         imagePullPolicy: Always
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jenkins-hook
+spec:
+  replicas: 5
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: api-proxy
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/cbe-jenkins-hook-dev:latest
+        imagePullPolicy: Always

@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jenkins-hook
+  labels:
+    app:  jenkins-hook
+    project: cbe-superapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app:  jenkins-hook
+  template:
+    metadata:
+      labels:
+        app:  jenkins-hook
+        project: cbe-superapp
+    spec:
+      imagePullSecrets:
+        - name: regcred 
+      containers:
+      - name:  jenkins-hook
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/cbe-jenkins-hook-dev:latest
+        imagePullPolicy: Always
+        ports:
+          - containerPort: 8080
+        envFrom:
+          - configMapRef:
+              name: superapp-env-configmap
