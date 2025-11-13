@@ -58,6 +58,6 @@ spec:
       imagePullSecrets:
         - name: regcred
       containers:
-      - name: api-proxy
+      - name: jenkins-hook
         image: superapp-registry.cbe.com.et:5000/cbe-superapp/cbe-jenkins-hook-dev:latest
         imagePullPolicy: Always
