@@ -52,7 +52,7 @@ kind: Deployment
 metadata:
   name: jenkins-hook
 spec:
-  replicas: 5
+  replicas: 1
   template:
     spec:
       imagePullSecrets:
