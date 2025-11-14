@@ -28,6 +28,8 @@ resources:
   - ../../../../base/superapp/services/utility
   - ../../../../base/superapp/services/vault
   - ../../../../base/superapp/services/voucher
+  - ../../../../base/superapp/services/standing-order
+
 
 
 patches:
