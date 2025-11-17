@@ -456,3 +456,20 @@ spec:
   host: devapisuperapp.cbe.com.et
   port:
     targetPort: 8080
+
+---
+
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: yabex-route
+  namespace: ocpsuperapp-dev
+spec:
+  path: /api/v1/cbesuperapp/yabex
+  to:
+    name: yabex-dev
+    weight: 100
+    kind: Service
+  host: devapisuperapp.cbe.com.et
+  port:
+    targetPort: 8080

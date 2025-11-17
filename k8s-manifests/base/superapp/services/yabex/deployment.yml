@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: yabex
+  labels:
+    app:  yabex
+    project: cbe-superapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app:  yabex
+  template:
+    metadata:
+      labels:
+        app:  yabex
+        project: cbe-superapp
+    spec:
+      imagePullSecrets:
+        - name: regcred 
+      containers:
+      - name:  yabex
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/yabex-dev:latest
+        imagePullPolicy: Always
+        ports:
+          - containerPort: 8080
+        envFrom:
+          - configMapRef:
+              name: superapp-env-configmap

@@ -29,6 +29,7 @@ resources:
   - ../../../../base/superapp/services/vault
   - ../../../../base/superapp/services/voucher
   - ../../../../base/superapp/services/standing-order
+  - ../../../../base/superapp/services/yabex
 
 
 

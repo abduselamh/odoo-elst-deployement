@@ -437,3 +437,20 @@ spec:
       - name: standing-order
         image: superapp-registry.cbe.com.et:5000/cbe-superapp/standing-order-dev:latest
         imagePullPolicy: Always
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: yabex
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: yabex
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/yabex-dev:latest
+        imagePullPolicy: Always
