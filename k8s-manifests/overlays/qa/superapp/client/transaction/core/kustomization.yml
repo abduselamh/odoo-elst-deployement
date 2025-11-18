@@ -3,7 +3,7 @@ kind: Kustomization
 namespace: ocpsuperapp-qa
 
 resources:
-  - ../../../../../../base/superapp/services/cbe-a2a
+  - ../../../../../../base/superapp/services/transaction
   - ../../../../../../base/superapp/services/cbe-to-cbe
   - ../../../../../../base/superapp/services/money-request
 

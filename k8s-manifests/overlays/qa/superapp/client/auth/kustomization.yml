@@ -6,6 +6,7 @@ resources:
   - ../../../../../base/superapp/services/member-auth
   - ../../../../../base/superapp/services/member-user
   - ../../../../../base/superapp/services/fayda
+  - ../../../../../base/superapp/services/migration
 
 
 

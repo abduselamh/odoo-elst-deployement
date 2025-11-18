@@ -1,11 +1,11 @@
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
-  name: cbe-a2a-route
+  name: transaction-route
 spec:
-  path: /api/v1/cbesuperapp/a2a
+  path: /api/v1/cbesuperapp/transaction
   to:
-    name: cbe-a2a-qa
+    name: transaction
     weight: 100
     kind: Service
   host: qaapisuperapp.cbe.com.et

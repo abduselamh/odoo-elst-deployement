@@ -3,37 +3,15 @@ kind: Kustomization
 namespace: ocpsuperapp-dev
 
 resources:
-  - ../../../../base/superapp/services/member-auth
-  - ../../../../base/superapp/services/member-user
-  - ../../../../base/superapp/services/budget
-  - ../../../../base/superapp/services/cbe-a2a
-  - ../../../../base/superapp/services/cbe-to-cbe
-  - ../../../../base/superapp/services/cbe-to-wallet
-  - ../../../../base/superapp/services/chat
-  - ../../../../base/superapp/services/common
-  - ../../../../base/superapp/services/donation
-  - ../../../../base/superapp/services/equb
-  - ../../../../base/superapp/services/exchange-rate
-  - ../../../../base/superapp/services/migration
-  - ../../../../base/superapp/services/money-request
-  - ../../../../base/superapp/services/news
-  - ../../../../base/superapp/services/pdf
-  - ../../../../base/superapp/services/three-click-auth
-  - ../../../../base/superapp/services/three-click-product
-  - ../../../../base/superapp/services/three-click-delivery
-  - ../../../../base/superapp/services/three-click-order
-  - ../../../../base/superapp/services/topup
-  - ../../../../base/superapp/services/transaction
-  - ../../../../base/superapp/services/utility
-  - ../../../../base/superapp/services/vault
-  - ../../../../base/superapp/services/voucher
-  - ../../../../base/superapp/services/standing-order
-  - ../../../../base/superapp/services/yabex
+  - ../../../../../../base/superapp/services/cbe-to-wallet
+  - ../../../../../../base/superapp/services/topup
+  - ../../../../../../base/superapp/services/utility
+  - ../../../../../../base/superapp/services/a2a
 
 
 
 patches:
-  - path: patch/dev-patch.yml
+  - path: patch/patch.yml
   - path: patch/route-patch.yml
 
-nameSuffix: -dev
+nameSuffix: -qa

@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: member-auth
+  name: cbe-a2a
 spec:
   replicas: 1
   template:
@@ -9,8 +9,26 @@ spec:
       imagePullSecrets:
         - name: regcred
       containers:
-      - name: member-auth
-        image: superapp-registry.cbe.com.et:5000/cbe-superapp/member-auth-qa:latest
+      - name: cbe-a2a
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/a2a-qa:latest
+        imagePullPolicy: Always
+
+---
+
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cbe-to-wallet
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: cbe-to-wallet
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/cbe-to-wallet-qa:latest
         imagePullPolicy: Always
 
 ---
@@ -18,7 +36,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: member-user
+  name: topup
 spec:
   replicas: 1
   template:
@@ -26,8 +44,8 @@ spec:
       imagePullSecrets:
         - name: regcred
       containers:
-      - name: member-user
-        image: superapp-registry.cbe.com.et:5000/cbe-superapp/member-user-qa:latest
+      - name: topup
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/topup-dev:latest
         imagePullPolicy: Always
 
 ---
@@ -35,7 +53,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: fayda
+  name: utility
 spec:
   replicas: 1
   template:
@@ -43,23 +61,6 @@ spec:
       imagePullSecrets:
         - name: regcred
       containers:
-      - name: fayda
-        image: superapp-registry.cbe.com.et:5000/cbe-superapp/fayda-qa:latest
-        imagePullPolicy: Always
-      
----
-
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: migration
-spec:
-  replicas: 1
-  template:
-    spec:
-      imagePullSecrets:
-        - name: regcred
-      containers:
-      - name: migration
-        image: superapp-registry.cbe.com.et:5000/cbe-superapp/migration-qa:latest
+      - name: utility
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/utility-qa:latest
         imagePullPolicy: Always

@@ -5,7 +5,7 @@ metadata:
 spec:
   path: /api/v1/cbesuperapp/member_auth
   to:
-    name: member-auth-dev
+    name: member-auth-qa
     weight: 100
     kind: Service
   host: qaapisuperapp.cbe.com.et
@@ -21,7 +21,7 @@ metadata:
 spec:
   path: /api/v1/cbesuperapp/member_users
   to:
-    name: member-user-dev
+    name: member-user-qa
     weight: 100
     kind: Service
   host: qaapisuperapp.cbe.com.et
@@ -38,7 +38,24 @@ metadata:
 spec:
   path: /api/v1/cbesuperapp/fayda
   to:
-    name: fayda-dev
+    name: fayda-qa
+    weight: 100
+    kind: Service
+  host: qaapisuperapp.cbe.com.et
+  port:
+    targetPort: 8080
+
+
+---
+
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: migration-route
+spec:
+  path: /api/v1/cbesuperapp/migration
+  to:
+    name: migration-qa
     weight: 100
     kind: Service
   host: qaapisuperapp.cbe.com.et
