@@ -3,10 +3,9 @@ kind: Kustomization
 namespace: ocpsuperapp-qa
 
 resources:
-  - ../../../../../base/superapp/services/member-auth
-  - ../../../../../base/superapp/services/member-user
-  - ../../../../../base/superapp/services/fayda
-
+  - ../../../../../../base/superapp/services/cbe-a2a
+  - ../../../../../../base/superapp/services/cbe-to-cbe
+  - ../../../../../../base/superapp/services/money-request
 
 
 

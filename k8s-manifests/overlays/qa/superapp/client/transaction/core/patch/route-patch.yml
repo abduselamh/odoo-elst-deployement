@@ -1,0 +1,45 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: cbe-a2a-route
+spec:
+  path: /api/v1/cbesuperapp/a2a
+  to:
+    name: cbe-a2a-qa
+    weight: 100
+    kind: Service
+  host: qaapisuperapp.cbe.com.et
+  port:
+    targetPort: 8080
+
+---
+
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: cbe-to-cbe-route
+spec:
+  path: /api/v1/cbesuperapp/cbe_to_cbe
+  to:
+    name: cbe-to-cbe-qa
+    weight: 100
+    kind: Service
+  host: qaapisuperapp.cbe.com.et
+  port:
+    targetPort: 8080
+
+---
+
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: money-request-route
+spec:
+  path: /api/v1/cbesuperapp/money_request
+  to:
+    name: money-request-qa
+    weight: 100
+    kind: Service
+  host: qaapisuperapp.cbe.com.et
+  port:
+    targetPort: 8080

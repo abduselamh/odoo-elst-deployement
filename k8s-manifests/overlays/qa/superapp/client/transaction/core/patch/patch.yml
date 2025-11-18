@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cbe-a2a
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: cbe-a2a
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/a2a-dev:latest
+        imagePullPolicy: Always
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cbe-to-cbe
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: cbe-to-cbe
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/cbe-to-cbe-dev:latest
+        imagePullPolicy: Always
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: money-request
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: money-request
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/money-request-dev:latest
+        imagePullPolicy: Always
