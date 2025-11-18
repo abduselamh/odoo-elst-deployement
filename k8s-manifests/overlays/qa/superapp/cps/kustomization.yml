@@ -1,6 +1,6 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-namespace: ocpsuperapp-dev
+namespace: ocpsuperapp-qa
 
 resources:
   - ../../../../base/superapp/services/cps-auth
@@ -12,4 +12,4 @@ patches:
   - path: patch/dev-patch.yml
   - path: patch/route-patch.yml
 
-nameSuffix: -dev
+nameSuffix: -qa
