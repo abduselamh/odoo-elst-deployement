@@ -45,7 +45,7 @@ spec:
         - name: regcred
       containers:
       - name: topup
-        image: superapp-registry.cbe.com.et:5000/cbe-superapp/topup-dev:latest
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/topup-qa:latest
         imagePullPolicy: Always
 
 ---
