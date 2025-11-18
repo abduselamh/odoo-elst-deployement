@@ -14,7 +14,6 @@ resources:
   - ../../../../base/superapp/services/donation
   - ../../../../base/superapp/services/equb
   - ../../../../base/superapp/services/exchange-rate
-  - ../../../../base/superapp/services/fayda
   - ../../../../base/superapp/services/migration
   - ../../../../base/superapp/services/money-request
   - ../../../../base/superapp/services/news

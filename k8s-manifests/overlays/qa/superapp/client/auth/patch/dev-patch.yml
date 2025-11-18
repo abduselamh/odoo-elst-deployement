@@ -29,3 +29,20 @@ spec:
       - name: member-user
         image: superapp-registry.cbe.com.et:5000/cbe-superapp/member-user-qa:latest
         imagePullPolicy: Always
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fayda
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: fayda
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/fayda-qa:latest
+        imagePullPolicy: Always
