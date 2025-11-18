@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bps-auth
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: bps-auth
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/bps-auth-qa:latest
+        imagePullPolicy: Always
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bps-action
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: bps-action
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/bps-action-qa:latest
+        imagePullPolicy: Always

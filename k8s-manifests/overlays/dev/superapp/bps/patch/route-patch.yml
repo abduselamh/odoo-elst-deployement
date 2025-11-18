@@ -2,7 +2,6 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: bps-auth-route
-  namespace: ocpsuperapp-dev
 spec:
   path: /api/v1/cbesuperapp/bps_auth
   to:
@@ -20,7 +19,6 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: bps-action-route
-  namespace: ocpsuperapp-dev
 spec:
   path: /api/v1/cbesuperapp/bps_action
   to:
@@ -37,7 +35,6 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: api-proxy-route
-  namespace: ocpsuperapp-dev
 spec:
   path: /superapp/parser
   to:
@@ -54,7 +51,6 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: jenkins-hook-route
-  namespace: ocpsuperapp-dev
 spec:
   path: /api/v1/cbesuperapp/hook
   to:

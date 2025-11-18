@@ -2,7 +2,7 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: cps-auth-route
-  namespace: ocpsuperapp-dev
+
 spec:
   path: /api/v1/cbesuperapp/cps_auth
   to:
@@ -20,7 +20,7 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: cps-action-route
-  namespace: ocpsuperapp-dev
+
 spec:
   path: /api/v1/cbesuperapp/cps_action
   to:

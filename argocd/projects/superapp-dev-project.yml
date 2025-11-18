@@ -9,6 +9,8 @@ spec:
   destinations:
   - namespace: 'ocpsuperapp-dev'
     server: '*'
+  - namespace: 'ocpsuperapp-qa'
+    server: '*'
   - namespace: 'ocpsuperapp-uat'
     server: '*'
   - namespace: 'openshift-gitops'

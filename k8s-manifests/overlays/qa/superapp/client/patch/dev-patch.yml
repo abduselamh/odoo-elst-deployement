@@ -1,0 +1,456 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: member-auth
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: member-auth
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/member-auth-dev:latest
+        imagePullPolicy: Always
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: member-user
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: member-user
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/member-user-dev:latest
+        imagePullPolicy: Always
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: budget
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: budget
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/budget-dev:latest
+        imagePullPolicy: Always
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cbe-a2a
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: cbe-a2a
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/a2a-dev:latest
+        imagePullPolicy: Always
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cbe-to-cbe
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: cbe-to-cbe
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/cbe-to-cbe-dev:latest
+        imagePullPolicy: Always
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cbe-to-wallet
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: cbe-to-wallet
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/cbe-to-wallet-dev:latest
+        imagePullPolicy: Always
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: chat
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: chat
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/chat-dev:latest
+        imagePullPolicy: Always
+      
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: common-api
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: common-api
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/common-api-dev:latest
+        imagePullPolicy: Always
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: donation
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: donation
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/donation-dev:latest
+        imagePullPolicy: Always
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: equb
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: equb
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/equb-dev:latest
+        imagePullPolicy: Always
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: exchange-rate
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: exchange-rate
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/exchange-rate-dev:latest
+        imagePullPolicy: Always
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fayda
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: fayda
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/fayda-dev:latest
+        imagePullPolicy: Always
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: migration
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: migration
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/migration-dev:latest
+        imagePullPolicy: Always
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: money-request
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: money-request
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/money-request-dev:latest
+        imagePullPolicy: Always
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: news
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: news
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/news-dev:latest
+        imagePullPolicy: Always
+
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pdf-server
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: pdf-server
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/pdf-server-dev:latest
+        imagePullPolicy: Always
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: three-click-auth
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: three-click-auth
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/three-click-auth-dev:latest
+        imagePullPolicy: Always
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: three-click-delivery
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: three-click-delivery
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/three-click-delivery-dev:latest
+        imagePullPolicy: Always
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: three-click-order
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: three-click-order
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/three-click-order-dev:latest
+        imagePullPolicy: Always
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: three-click-product
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: three-click-product
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/three-click-product-dev:latest
+        imagePullPolicy: Always
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: topup
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: topup
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/topup-dev:latest
+        imagePullPolicy: Always
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: transaction
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: transaction
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/transaction-dev:latest
+        imagePullPolicy: Always
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: utility
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: utility
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/utility-dev:latest
+        imagePullPolicy: Always
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vault
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: vault
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/vault-dev:latest
+        imagePullPolicy: Always
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: voucher
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: voucher
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/voucher-dev:latest
+        imagePullPolicy: Always
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: standing-order
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: standing-order
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/standing-order-dev:latest
+        imagePullPolicy: Always
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: yabex
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: yabex
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/yabex-dev:latest
+        imagePullPolicy: Always

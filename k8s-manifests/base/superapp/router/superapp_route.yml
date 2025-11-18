@@ -2,7 +2,6 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: route
-  namespace: ocpsuperapp-dev
 spec:
   path: /api/v1/cbesuperapp/bps_auth
   to:

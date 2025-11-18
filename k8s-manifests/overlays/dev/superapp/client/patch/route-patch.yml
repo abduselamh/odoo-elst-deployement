@@ -2,7 +2,7 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: member-auth-route
-  namespace: ocpsuperapp-dev
+
 spec:
   path: /api/v1/cbesuperapp/member_auth
   to:
@@ -19,7 +19,7 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: member-user-route
-  namespace: ocpsuperapp-dev
+
 spec:
   path: /api/v1/cbesuperapp/member_users
   to:
@@ -37,7 +37,7 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: budget-route
-  namespace: ocpsuperapp-dev
+
 spec:
   path: /api/v1/cbesuperapp/budget
   to:
@@ -54,7 +54,7 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: cbe-a2a-route
-  namespace: ocpsuperapp-dev
+
 spec:
   path: /api/v1/cbesuperapp/a2a
   to:
@@ -72,7 +72,7 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: cbe-a2a-route
-  namespace: ocpsuperapp-dev
+
 spec:
   path: /api/v1/cbesuperapp/a2a
   to:
@@ -89,7 +89,7 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: cbe-to-cbe-route
-  namespace: ocpsuperapp-dev
+
 spec:
   path: /api/v1/cbesuperapp/cbe_to_cbe
   to:
@@ -106,7 +106,7 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: cbe-to-wallet-route
-  namespace: ocpsuperapp-dev
+
 spec:
   path: /api/v1/cbesuperapp/cbe_to_wallet
   to:
@@ -123,7 +123,7 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: chat-route
-  namespace: ocpsuperapp-dev
+
 spec:
   path: /api/v1/cbesuperapp/chat
   to:
@@ -140,7 +140,7 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: common-api-route
-  namespace: ocpsuperapp-dev
+
 spec:
   path: /api/v1/cbesuperapp/tokenizer
   to:
@@ -157,7 +157,7 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: donation-route
-  namespace: ocpsuperapp-dev
+
 spec:
   path: /api/v1/cbesuperapp/donation
   to:
@@ -174,7 +174,7 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: equb-route
-  namespace: ocpsuperapp-dev
+
 spec:
   path: /api/v1/cbesuperapp/equb
   to:
@@ -191,7 +191,7 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: exchange-rate-route
-  namespace: ocpsuperapp-dev
+
 spec:
   path: /api/v1/cbesuperapp/exchange_rate
   to:
@@ -208,7 +208,7 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: fayda-route
-  namespace: ocpsuperapp-dev
+
 spec:
   path: /api/v1/cbesuperapp/fayda
   to:
@@ -225,7 +225,7 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: migration-route
-  namespace: ocpsuperapp-dev
+
 spec:
   path: /api/v1/cbesuperapp/migration
   to:
@@ -242,7 +242,7 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: money-request-route
-  namespace: ocpsuperapp-dev
+
 spec:
   path: /api/v1/cbesuperapp/money_request
   to:
@@ -259,7 +259,7 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: news-route
-  namespace: ocpsuperapp-dev
+
 spec:
   path: /api/v1/cbesuperapp/news
   to:
@@ -276,7 +276,7 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: pdf-server-route
-  namespace: ocpsuperapp-dev
+
 spec:
   path: /api/v1/cbesuperapp/pdf_server
   to:
@@ -293,7 +293,7 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: three-click-auth-route
-  namespace: ocpsuperapp-dev
+
 spec:
   path: /api/v1/cbesuperapp/three_click_auth
   to:
@@ -310,7 +310,7 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: three-click-delivery-route
-  namespace: ocpsuperapp-dev
+
 spec:
   path: /api/v1/cbesuperapp/three_click_delivery
   to:
@@ -327,7 +327,7 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: three-click-order-route
-  namespace: ocpsuperapp-dev
+
 spec:
   path: /api/v1/cbesuperapp/three_click_order
   to:
@@ -344,7 +344,7 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: three-click-product-route
-  namespace: ocpsuperapp-dev
+
 spec:
   path: /api/v1/cbesuperapp/three_click_product
   to:
@@ -361,7 +361,7 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: topup-route
-  namespace: ocpsuperapp-dev
+
 spec:
   path: /api/v1/cbesuperapp/topup
   to:
@@ -378,7 +378,7 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: transaction-route
-  namespace: ocpsuperapp-dev
+
 spec:
   path: /api/v1/cbesuperapp/transaction
   to:
@@ -395,7 +395,7 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: utility-route
-  namespace: ocpsuperapp-dev
+
 spec:
   path: /api/v1/cbesuperapp/utility
   to:
@@ -412,7 +412,7 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: vault-route
-  namespace: ocpsuperapp-dev
+
 spec:
   path: /api/v1/cbesuperapp/vault
   to:
@@ -429,7 +429,7 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: voucher-route
-  namespace: ocpsuperapp-dev
+
 spec:
   path: /api/v1/cbesuperapp/voucher
   to:
@@ -446,7 +446,7 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: standing-order-route
-  namespace: ocpsuperapp-dev
+
 spec:
   path: /api/v1/cbesuperapp/standing_order
   to:
@@ -463,7 +463,7 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: yabex-route
-  namespace: ocpsuperapp-dev
+
 spec:
   path: /api/v1/cbesuperapp/yabex
   to:
