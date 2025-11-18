@@ -10,7 +10,7 @@ spec:
         - name: regcred
       containers:
       - name: cps-auth
-        image: superapp-registry.cbe.com.et:5000/cbe-superapp/cps-auth-dev:latest
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/cps-auth-qa:latest
         imagePullPolicy: Always
 
 ---
@@ -26,5 +26,5 @@ spec:
         - name: regcred
       containers:
       - name: cps-action
-        image: superapp-registry.cbe.com.et:5000/cbe-superapp/cps-action-dev:latest
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/cps-action-qa:latest
         imagePullPolicy: Always

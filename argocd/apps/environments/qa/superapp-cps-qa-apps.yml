@@ -1,0 +1,22 @@
+# bootstrap/root-app.yaml
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: superapp-cps-qa
+  namespace: openshift-gitops
+spec:
+  project: cbe-superapp-qa
+  sources:
+    - repoURL: https://gitlab.cbe.com.et/NatnaelTadesse/cbe-superapp-deployment.git
+      targetRevision: master
+      path: k8s-manifests/overlays/qa/superapp/cps  
+        #directory: 
+        #recurse: false
+      kustomize: {}
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: ocpsuperapp-qa
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
