@@ -6,7 +6,7 @@ resources:
   - ../../../../../../base/superapp/services/cbe-to-wallet
   - ../../../../../../base/superapp/services/topup
   - ../../../../../../base/superapp/services/utility
-  - ../../../../../../base/superapp/services/a2a
+  - ../../../../../../base/superapp/services/cbe-a2a
 
 
 
