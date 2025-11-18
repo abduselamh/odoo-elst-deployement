@@ -3,7 +3,7 @@ kind: Kustomization
 namespace: ocpsuperapp-qa
 
 resources:
-  - .././../../../base/superapp/services/member-auth
+  - ../../../../../base/superapp/services/member-auth
   - ../../../../../base/superapp/services/member-user
   - ../../../../../base/superapp/services/fayda
 
