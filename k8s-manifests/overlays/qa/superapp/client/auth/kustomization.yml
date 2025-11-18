@@ -1,0 +1,15 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: ocpsuperapp-qa
+
+resources:
+  - ../../../../base/superapp/services/member-auth
+  - ../../../../base/superapp/services/member-user
+
+
+
+patches:
+  - path: patch/dev-patch.yml
+  - path: patch/route-patch.yml
+
+nameSuffix: -qa
