@@ -57,6 +57,6 @@ spec:
     name: common-api-qa
     weight: 100
     kind: Service
-  host: devapisuperapp.cbe.com.et
+  host: qaapisuperapp.cbe.com.et
   port:
     targetPort: 8080
