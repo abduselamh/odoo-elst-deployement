@@ -46,3 +46,20 @@ spec:
       - name: money-request
         image: superapp-registry.cbe.com.et:5000/cbe-superapp/money-request-qa:latest
         imagePullPolicy: Always
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: common-api
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: common-api
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/common-api-qa:latest
+        imagePullPolicy: Always

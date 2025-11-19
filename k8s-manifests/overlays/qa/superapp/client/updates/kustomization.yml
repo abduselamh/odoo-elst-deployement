@@ -1,0 +1,17 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: ocpsuperapp-qa
+
+resources:
+  - ../../../../../base/superapp/services/donation
+  - ../../../../../base/superapp/services/exchange-rate
+  - ../../../../../base/superapp/services/news
+
+
+
+
+patches:
+  - path: patch/patch.yml
+  - path: patch/route-patch.yml
+
+nameSuffix: -qa

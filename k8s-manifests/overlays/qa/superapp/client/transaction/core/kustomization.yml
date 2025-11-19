@@ -6,6 +6,7 @@ resources:
   - ../../../../../../base/superapp/services/transaction
   - ../../../../../../base/superapp/services/cbe-to-cbe
   - ../../../../../../base/superapp/services/money-request
+  - ../../../../../../base/superapp/services/common
 
 
 

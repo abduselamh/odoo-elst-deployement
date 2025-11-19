@@ -1,0 +1,49 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: news
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: news
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/news-qa:latest
+        imagePullPolicy: Always
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: donation
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: donation
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/donation-qa:latest
+        imagePullPolicy: Always
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: exchange-rate
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: exchange-rate
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/exchange-rate-qa:latest
+        imagePullPolicy: Always
+      

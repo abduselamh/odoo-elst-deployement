@@ -1,0 +1,48 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: news-route
+spec:
+  path: /api/v1/cbesuperapp/news
+  to:
+    name: news-qa
+    weight: 100
+    kind: Service
+  host: qaapisuperapp.cbe.com.et
+  port:
+    targetPort: 8080
+
+---
+
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: donation-route
+spec:
+  path: /api/v1/cbesuperapp/donation
+  to:
+    name: donation-qa
+    weight: 100
+    kind: Service
+  host: qaapisuperapp.cbe.com.et
+  port:
+    targetPort: 8080
+
+
+---
+
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: exchange-rate-route
+spec:
+  path: /api/v1/cbesuperapp/exchange_rate
+  to:
+    name: exchange-rate-qa
+    weight: 100
+    kind: Service
+  host: qaapisuperapp.cbe.com.et
+  port:
+    targetPort: 8080
+
+
