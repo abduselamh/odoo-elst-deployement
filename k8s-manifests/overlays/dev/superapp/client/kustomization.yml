@@ -30,6 +30,7 @@ resources:
   - ../../../../base/superapp/services/voucher
   - ../../../../base/superapp/services/standing-order
   - ../../../../base/superapp/services/yabex
+  - ../../../../base/superapp/services/notification
 
 
 
