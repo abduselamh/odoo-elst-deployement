@@ -21,7 +21,7 @@ metadata:
   name: member-user-route
 
 spec:
-  path: /api/v1/cbesuperapp/member_users
+  path: /api/v1/cbesuperapp/member_user
   to:
     name: member-user-dev
     weight: 100
