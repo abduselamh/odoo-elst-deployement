@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ecommerce-erp
+  labels:
+    app:  ecommerce-erp
+    project: cbe-superapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app:  ecommerce-erp
+  template:
+    metadata:
+      labels:
+        app:  ecommerce-erp
+        project: cbe-superapp
+    spec:
+      imagePullSecrets:
+        - name: regcred 
+      containers:
+      - name:  ecommerce-erp
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/ecommerce-erp-dev:latest
+        imagePullPolicy: Always
+        ports:
+          - containerPort: 8080
+        envFrom:
+          - configMapRef:
+              name: superapp-env-configmap
