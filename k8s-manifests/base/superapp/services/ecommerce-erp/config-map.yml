@@ -1,0 +1,59 @@
+#configmap.yml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: odoo-config
+data:
+  odoo.conf: |
+    [options]
+    admin_passwd = masterpassword
+    default_productivity_apps = True
+
+    # Database settings
+    db_host = 
+    db_port = 5432
+    db_user = odoo_user
+    db_password = 0UvwQ^Qr*^s1a*VM
+    db_name = cbe
+    db_maxconn = 64
+    db_sslmode = disable
+    db_template = template0
+
+    addons_path = /etc/odoo/addons,/etc/odoo/custom_addons,/etc/odoo/starpay_addons,/etc/odoo/web_theme
+    data_dir = /var/lib/odoo
+
+    # HTTP Service Configuration
+    http_enable = True
+    http_interface = 0.0.0.0
+    http_port = 8069
+    proxy_mode = True
+    websocket_enabled = True
+    xmlrpc = True
+    xmlrpc_interface = 0.0.0.0
+    xmlrpc_port = 8069
+
+    # Web interface Configuration
+    list_db = True
+    dbfilter = cbe
+
+    # Logging Configuration
+    log_db = True
+    log_handler = [':INFO']
+    log_level = debug
+    logfile = /var/log/odoo/odoo.log
+    syslog = False
+
+    # Performance Tuning
+    workers = 0
+    max_cron_threads = 1
+    limit_memory_hard = 2684354560
+    limit_memory_soft = 2147483648
+    limit_request = 8192
+    limit_time_cpu = 600
+    limit_time_real = 1200
+
+    # Miscellaneous
+    email_from = False
+    without_demo = True
+    demo = {}
+    server_wide_modules = base,web

@@ -9,6 +9,6 @@ spec:
     app: ecommerce-erp
   ports:
     - port: 80
-      targetPort: 8080
+      targetPort: 8069
       protocol: TCP
   type: ClusterIP

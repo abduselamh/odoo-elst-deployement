@@ -23,7 +23,30 @@ spec:
         image: superapp-registry.cbe.com.et:5000/cbe-superapp/ecommerce-erp-dev:latest
         imagePullPolicy: Always
         ports:
-          - containerPort: 8080
-        envFrom:
-          - configMapRef:
-              name: superapp-env-configmap
+          - containerPort: 8069
+        volumeMounts:
+          - mountPath: /var/lib/odoo
+            name: cbe-odoo-volume
+          - name: odoo-config-volume
+            mountPath: /etc/odoo/odoo.conf
+            subPath: odoo.conf
+      volumes:
+        - name: cbe-odoo-volume
+          persistentVolumeClaim:
+            claimName: cbe-odoo-pvc
+        - name: odoo-config-volume
+          configMap:
+            name: odoo-config
+
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: cbe-odoo-pvc
+  namespace: cbe-odoo
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi
