@@ -10,11 +10,11 @@ data:
     default_productivity_apps = True
 
     # Database settings
-    db_host = 
+    db_host = postgres.ocpsuperapp-dev.svc.cluster.local
     db_port = 5432
-    db_user = odoo_user
-    db_password = 0UvwQ^Qr*^s1a*VM
-    db_name = cbe
+    db_user = ecommerce_user
+    db_password = 6oeKXL7I2gxC
+    db_name = erp_db
     db_maxconn = 64
     db_sslmode = disable
     db_template = template0
