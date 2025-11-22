@@ -23,7 +23,7 @@ metadata:
 spec:
   path: /api/v1/cbesuperapp/ecommerce
   to:
-    name: cps-auth-dev
+    name: ecommerce-dev
     weight: 100
     kind: Service
   host: devapisuperapp.cbe.com.et
