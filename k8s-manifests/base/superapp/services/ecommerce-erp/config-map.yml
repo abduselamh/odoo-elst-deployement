@@ -34,7 +34,7 @@ data:
 
     # Web interface Configuration
     list_db = True
-    dbfilter = cbe
+    dbfilter = erp_dbp
 
     # Logging Configuration
     log_db = True
