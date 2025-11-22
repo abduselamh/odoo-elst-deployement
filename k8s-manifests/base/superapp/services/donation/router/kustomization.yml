@@ -4,4 +4,4 @@ kind: Kustomization
 resources:
   - ../../../router
 
-namePrefix: ecommerce-erp-
+namePrefix: donation-
