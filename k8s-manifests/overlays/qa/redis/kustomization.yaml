@@ -11,4 +11,4 @@ resources:
 patches:
   - path: patch/dev-patch.yml
 
-nameSuffix: -dev
+nameSuffix: -qa
