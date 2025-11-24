@@ -19,7 +19,7 @@ data:
     db_sslmode = disable
     db_template = template0
 
-    addons_path = /etc/odoo/addons,/etc/odoo/custom_addons,/etc/odoo/starpay_addons,/etc/odoo/web_theme
+    addons_path = /etc/odoo, /etc/odoo/themes, /etc/odoo/addons,/etc/odoo/starpay_addons, /etc/odoo/threeclick
     data_dir = /var/lib/odoo
 
     # HTTP Service Configuration
