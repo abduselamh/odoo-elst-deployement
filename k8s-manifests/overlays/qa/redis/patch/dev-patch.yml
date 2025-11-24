@@ -8,3 +8,10 @@ spec:
     spec:
       containers:
       - name: redis
+        volumeMounts:
+          - mountPath: /data
+            name: redis-pvc-qa
+      volumes:
+        - name: redis-pvc-qa
+          persistentVolumeClaim:
+            claimName: redis-pvc-qa
