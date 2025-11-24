@@ -32,6 +32,7 @@ resources:
   - ../../../../base/superapp/services/yabex
   - ../../../../base/superapp/services/notification
   - ../../../../base/superapp/services/file-server
+  - ../../../../base/superapp/services/utility-parser
 
 
 

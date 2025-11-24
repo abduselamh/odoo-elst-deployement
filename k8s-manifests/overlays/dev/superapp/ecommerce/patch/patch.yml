@@ -28,3 +28,4 @@ spec:
       - name: ecommerce
         image: superapp-registry.cbe.com.et:5000/cbe-superapp/ecommerce-dev:latest
         imagePullPolicy: Always
+

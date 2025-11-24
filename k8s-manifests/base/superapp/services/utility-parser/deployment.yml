@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: utility-parser
+  labels:
+    app:  utility-parser
+    project: cbe-superapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app:  utility-parser
+  template:
+    metadata:
+      labels:
+        app:  utility-parser
+        project: cbe-superapp
+    spec:
+      imagePullSecrets:
+        - name: regcred 
+      containers:
+      - name:  utility-parser
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/utility-parser-dev:latest
+        imagePullPolicy: Always
+        ports:
+          - containerPort: 8080
+        envFrom:
+          - configMapRef:
+              name: superapp-env-configmap

@@ -489,3 +489,20 @@ spec:
       - name: file-server
         image: superapp-registry.cbe.com.et:5000/cbe-superapp/file-server-dev:latest
         imagePullPolicy: Always
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: utility-parser
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: utility-parser
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/utility-parser-dev:latest
+        imagePullPolicy: Always
