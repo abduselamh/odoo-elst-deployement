@@ -5,7 +5,7 @@ metadata:
 spec:
   path: /api/v1/cbesuperapp/transaction
   to:
-    name: transaction
+    name: transaction-qa
     weight: 100
     kind: Service
   host: qaapisuperapp.cbe.com.et
