@@ -19,7 +19,7 @@ kind: Route
 metadata:
   name: member-user-route
 spec:
-  path: /api/v1/cbesuperapp/member_users
+  path: /api/v1/cbesuperapp/member_user
   to:
     name: member-user-qa
     weight: 100
