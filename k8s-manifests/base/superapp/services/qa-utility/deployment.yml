@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: qa-utility
+  labels:
+    app:  qa-utility
+    project: cbe-superapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app:  qa-utility
+  template:
+    metadata:
+      labels:
+        app:  qa-utility
+        project: cbe-superapp
+    spec:
+      imagePullSecrets:
+        - name: regcred 
+      containers:
+      - name:  qa-utility
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/qa-utility-dev:latest
+        imagePullPolicy: Always
+        ports:
+          - containerPort: 8080
+        envFrom:
+          - configMapRef:
+              name: superapp-env-configmap
