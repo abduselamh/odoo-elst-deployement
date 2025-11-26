@@ -10,7 +10,7 @@ spec:
         - name: regcred
       containers:
       - name: ecommerce-erp
-        image: superapp-registry.cbe.com.et:5000/cbe-superapp/ecommerce-erp-dev:latest
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/ecommerce-erp-dev
         imagePullPolicy: Always
 ---
 
@@ -26,6 +26,6 @@ spec:
         - name: regcred
       containers:
       - name: ecommerce
-        image: superapp-registry.cbe.com.et:5000/cbe-superapp/ecommerce-dev:latest
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/ecommerce-dev
         imagePullPolicy: Always
 
