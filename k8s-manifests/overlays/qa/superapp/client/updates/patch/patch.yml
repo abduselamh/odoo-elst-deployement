@@ -46,4 +46,21 @@ spec:
       - name: exchange-rate
         image: superapp-registry.cbe.com.et:5000/cbe-superapp/exchange-rate-qa:latest
         imagePullPolicy: Always
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: notification
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: notification
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/notification-qa:latest
+        imagePullPolicy: Always
       
