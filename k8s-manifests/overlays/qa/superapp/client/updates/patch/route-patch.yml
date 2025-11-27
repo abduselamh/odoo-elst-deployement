@@ -46,3 +46,19 @@ spec:
     targetPort: 8080
 
 
+---
+
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: notification-route
+spec:
+  path: /api/v1/cbesuperapp/notification
+  to:
+    name: notification-qa
+    weight: 100
+    kind: Service
+  host: qaapisuperapp.cbe.com.et
+  port:
+    targetPort: 8080
+
