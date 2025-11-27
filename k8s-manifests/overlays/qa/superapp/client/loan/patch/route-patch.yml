@@ -21,7 +21,7 @@ metadata:
 spec:
   path: /api/v1/cbesuperapp/vault
   to:
-    name: vault-qa
+    name: vault-svc-qa
     weight: 100
     kind: Service
   host: qaapisuperapp.cbe.com.et
