@@ -176,7 +176,7 @@ metadata:
   name: equb-route
 
 spec:
-  path: /api/v1/cbesuperapp/equb
+  path: /api/v1/cbesuperapp/equbs
   to:
     name: equb-dev
     weight: 100
