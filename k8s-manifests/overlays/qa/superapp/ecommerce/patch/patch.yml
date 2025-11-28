@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ecommerce-erp
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: ecommerce-erp
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/ecommerce-erp-qa
+        imagePullPolicy: Always
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ecommerce
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: ecommerce
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/ecommerce-qa
+        imagePullPolicy: Always
+
