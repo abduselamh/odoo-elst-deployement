@@ -12,6 +12,19 @@ spec:
       - name: ecommerce-erp
         image: superapp-registry.cbe.com.et:5000/cbe-superapp/ecommerce-erp-qa
         imagePullPolicy: Always
+        volumeMounts:
+          - mountPath: /var/lib/odoo
+            name: cbe-odoo-volume
+          - name: odoo-config-volume
+            mountPath: /etc/odoo/odoo.conf
+            subPath: odoo.conf
+      volumes:
+        - name: cbe-odoo-volume
+          persistentVolumeClaim:
+            claimName: cbe-odoo-pvc-qa
+        - name: odoo-config-volume
+          configMap:
+            name: odoo-config
 ---
 
 apiVersion: apps/v1
