@@ -6,9 +6,6 @@ spec:
   replicas: 1
   template:
     spec:
-      securityContext:
-        runAsUser: 0
-        runAsGroup: 0
       imagePullSecrets:
         - name: regcred
       containers:
@@ -22,6 +19,9 @@ spec:
             mountPath: /etc/odoo/odoo.conf
             subPath: odoo.conf
       volumes:
+
+
+
         - name: cbe-odoo-volume
           persistentVolumeClaim:
             claimName: cbe-odoo-pvc-qa
