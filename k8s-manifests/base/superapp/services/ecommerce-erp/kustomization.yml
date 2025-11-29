@@ -4,3 +4,5 @@ resources:
   - deployment.yml
   - service.yml
   - router/
+images:
+  - newTag: 18e992aba
