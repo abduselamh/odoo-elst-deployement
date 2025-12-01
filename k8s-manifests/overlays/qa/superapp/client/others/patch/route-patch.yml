@@ -34,7 +34,7 @@ kind: Route
 metadata:
   name: virtual-card-route
 spec:
-  path: /api/v1/cbesuperapp/virtual-card
+  path: /api/v1/cbesuperapp/card
   to:
     name: virtual-card-qa
     weight: 100
