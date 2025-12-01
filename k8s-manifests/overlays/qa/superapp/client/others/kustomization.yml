@@ -5,6 +5,7 @@ namespace: ocpsuperapp-qa
 resources:
   - ../../../../../base/superapp/services/budget
   - ../../../../../base/superapp/services/chat
+  - ../../../../../base/superapp/services/virtual-card
   - ../../../../../base/superapp/services/equb
   - ../../../../../base/superapp/services/pdf
 

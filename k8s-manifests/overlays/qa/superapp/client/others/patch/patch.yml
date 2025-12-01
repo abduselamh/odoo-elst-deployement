@@ -29,7 +29,22 @@ spec:
       - name: chat
         image: superapp-registry.cbe.com.et:5000/cbe-superapp/chat-qa:latest
         imagePullPolicy: Always
+---
 
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: virtual-card
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: virtual-card
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/virtual-card-qa:latest
+        imagePullPolicy: Always
 ---
 
 apiVersion: apps/v1
