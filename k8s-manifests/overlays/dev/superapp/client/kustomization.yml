@@ -33,6 +33,7 @@ resources:
   - ../../../../base/superapp/services/notification
   - ../../../../base/superapp/services/file-server
   - ../../../../base/superapp/services/utility-parser
+  - ../../../../base/superapp/services/virtual-card
 
 
 

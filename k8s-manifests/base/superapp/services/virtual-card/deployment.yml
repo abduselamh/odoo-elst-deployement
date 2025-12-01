@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: virtual-card
+  labels:
+    app:  virtual-card
+    project: cbe-superapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app:  virtual-card
+  template:
+    metadata:
+      labels:
+        app:  virtual-card
+        project: cbe-superapp
+    spec:
+      imagePullSecrets:
+        - name: regcred 
+      containers:
+      - name:  virtual-card
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/virtual-card-dev:latest
+        imagePullPolicy: Always
+        ports:
+          - containerPort: 8080
+        envFrom:
+          - configMapRef:
+              name: superapp-env-configmap

@@ -139,6 +139,23 @@ spec:
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
+  name: virtual-card-route
+
+spec:
+  path: /api/v1/cbesuperapp/virtual-card
+  to:
+    name: virtual-card-dev
+    weight: 100
+    kind: Service
+  host: devapisuperapp.cbe.com.et
+  port:
+    targetPort: 8080
+
+---
+
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
   name: common-api-route
 
 spec:
