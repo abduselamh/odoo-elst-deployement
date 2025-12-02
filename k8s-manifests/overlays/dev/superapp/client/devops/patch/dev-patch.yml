@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jenkins-hook
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: jenkins-hook
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/jenkins-hook-dev:latest
+        imagePullPolicy: Always
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-proxy
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: member-user
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/member-user-dev:latest
+        imagePullPolicy: Always

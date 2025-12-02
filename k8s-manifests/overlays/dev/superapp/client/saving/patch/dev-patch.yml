@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: equb
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: equb
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/equb-dev:latest
+        imagePullPolicy: Always
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: budget
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: budget
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/budget-dev:latest
+        imagePullPolicy: 
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vault
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: vault
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/vault-dev:latest
+        imagePullPolicy: Always

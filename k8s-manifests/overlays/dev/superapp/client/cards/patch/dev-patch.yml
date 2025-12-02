@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: virtual-card
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: virtual-card
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/virtual-card-dev:latest
+        imagePullPolicy: Always
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: voucher
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: voucher
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/voucher-dev:latest
+        imagePullPolicy: Always
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: standing-order
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: standing-order
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/standing-order-dev:latest
+        imagePullPolicy: Always

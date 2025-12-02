@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: utility
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: utility
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/utility-dev:latest
+        imagePullPolicy: Always
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: utility-parser
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: utility-parser
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/utility-parser-dev:latest
+        imagePullPolicy: Always

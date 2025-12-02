@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: file-server
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: file-server
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/file-server-dev:latest
+        imagePullPolicy: Always
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pdf-server
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: pdf-server
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/pdf-server-dev:latest
+        imagePullPolicy: Always

@@ -1,0 +1,27 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: jenkins-hook-route
+spec:
+  path: /api/v1/cbesuperapp/hook
+  to:
+    name: jenkins-hook
+    weight: 100
+    kind: Service
+  host: devapisuperapp.cbe.com.et
+  port:
+    targetPort: 8080
+---
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: api-proxy-route
+spec:
+  path: /api/v1/cbesuperapp/parser
+  to:
+    name: api-proxy
+    weight: 100
+    kind: Service
+  host: devapisuperapp.cbe.com.et
+  port:
+    targetPort: 8080
