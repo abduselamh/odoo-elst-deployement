@@ -1,0 +1,22 @@
+# bootstrap/root-app.yaml
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: superapp-client-dev
+  namespace: openshift-gitops
+spec:
+  project: cbe-superapp-dev
+  sources:
+    - repoURL: https://gitlab.cbe.com.et/NatnaelTadesse/cbe-superapp-deployment.git
+      targetRevision: master
+      path: k8s-manifests/overlays/dev/superapp/client/devops
+        #directory: 
+        #recurse: false
+      kustomize: {}
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: ocpsuperapp-dev
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
