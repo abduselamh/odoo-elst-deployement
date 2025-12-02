@@ -5,7 +5,7 @@ metadata:
 spec:
   path: /api/v1/cbesuperapp/ips
   to:
-    name: ips-dev
+    name: ips-qa
     weight: 100
     kind: Service
   host: qaapisuperapp.cbe.com.et
