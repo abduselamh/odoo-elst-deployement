@@ -5,7 +5,7 @@ metadata:
 spec:
   path: /api/v1/cbesuperapp/transaction
   to:
-    name: transaction
+    name: transaction-dev
     weight: 100
     kind: Service
   host: devapisuperapp.cbe.com.et
@@ -19,7 +19,7 @@ metadata:
 spec:
   path: /api/v1/cbesuperapp/cbe_to_cbe
   to:
-    name: cbe-to-cbe
+    name: cbe-to-cbe-dev
     weight: 100
     kind: Service
   host: devapisuperapp.cbe.com.et
@@ -33,7 +33,7 @@ metadata:
 spec:
   path: /api/v1/cbesuperapp/money_request
   to:
-    name: money-request
+    name: money-request-dev
     weight: 100
     kind: Service
   host: devapisuperapp.cbe.com.et
@@ -47,7 +47,7 @@ metadata:
 spec:
   path: /api/v1/cbesuperapp/common_api
   to:
-    name: common-api
+    name: common-api-dev
     weight: 100
     kind: Service
   host: devapisuperapp.cbe.com.et

@@ -5,7 +5,7 @@ metadata:
 spec:
   path: /api/v1/cbesuperapp/cbe-to-wallet
   to:
-    name: cbe-to-wallet
+    name: cbe-to-wallet-dev
     weight: 100
     kind: Service
   host: devapisuperapp.cbe.com.et
@@ -15,7 +15,7 @@ spec:
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
-  name: topup-route
+  name: topup-route-dev
 spec:
   path: /api/v1/cbesuperapp/topup
   to:

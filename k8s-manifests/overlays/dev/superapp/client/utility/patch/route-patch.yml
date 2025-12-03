@@ -5,7 +5,7 @@ metadata:
 spec:
   path: /api/v1/cbesuperapp/utility
   to:
-    name: utility
+    name: utility-dev
     weight: 100
     kind: Service
   host: devapisuperapp.cbe.com.et
@@ -19,7 +19,7 @@ metadata:
 spec:
   path: /api/v1/cbesuperapp/utility_parser
   to:
-    name: utility-parser
+    name: utility-parser-dev
     weight: 100
     kind: Service
   host: devapisuperapp.cbe.com.et

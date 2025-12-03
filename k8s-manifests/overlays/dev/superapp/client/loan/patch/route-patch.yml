@@ -5,7 +5,7 @@ metadata:
 spec:
   path: /api/v1/cbesuperapp/yabex
   to:
-    name: yabex
+    name: yabex-dev
     weight: 100
     kind: Service
   host: devapisuperapp.cbe.com.et

@@ -5,7 +5,7 @@ metadata:
 spec:
   path: /api/v1/cbesuperapp/cbe_to_wallet
   to:
-    name: cbe-to-wallet
+    name: cbe-to-wallet-dev
     weight: 100
     kind: Service
   host: devapisuperapp.cbe.com.et
@@ -19,7 +19,7 @@ metadata:
 spec:
   path: /api/v1/cbesuperapp/topup
   to:
-    name: topup
+    name: topup-dev
     weight: 100
     kind: Service
   host: devapisuperapp.cbe.com.et

@@ -5,7 +5,7 @@ metadata:
 spec:
   path: /api/v1/cbesuperapp/notification
   to:
-    name: notification
+    name: notification-dev
     weight: 100
     kind: Service
   host: devapisuperapp.cbe.com.et

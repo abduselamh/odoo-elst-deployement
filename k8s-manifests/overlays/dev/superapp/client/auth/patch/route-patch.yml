@@ -5,7 +5,7 @@ metadata:
 spec:
   path: /api/v1/cbesuperapp/member_auth
   to:
-    name: member-auth
+    name: member-auth-dev
     weight: 100
     kind: Service
   host: devapisuperapp.cbe.com.et
@@ -19,7 +19,7 @@ metadata:
 spec:
   path: /api/v1/cbesuperapp/member_user
   to:
-    name: member-user
+    name: member-user-dev
     weight: 100
     kind: Service
   host: devapisuperapp.cbe.com.et
@@ -33,7 +33,7 @@ metadata:
 spec:
   path: /api/v1/cbesuperapp/fayda
   to:
-    name: fayda
+    name: fayda-dev
     weight: 100
     kind: Service
   host: devapisuperapp.cbe.com.et
@@ -47,7 +47,7 @@ metadata:
 spec:
   path: /api/v1/cbesuperapp/migration
   to:
-    name: migration
+    name: migration-dev
     weight: 100
     kind: Service
   host: devapisuperapp.cbe.com.et

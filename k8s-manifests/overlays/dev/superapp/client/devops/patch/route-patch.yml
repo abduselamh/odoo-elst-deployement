@@ -5,7 +5,7 @@ metadata:
 spec:
   path: /api/v1/cbesuperapp/hook
   to:
-    name: jenkins-hook
+    name: jenkins-hook-dev
     weight: 100
     kind: Service
   host: devapisuperapp.cbe.com.et
@@ -19,7 +19,7 @@ metadata:
 spec:
   path: /api/v1/cbesuperapp/parser
   to:
-    name: api-proxy
+    name: api-proxy-dev
     weight: 100
     kind: Service
   host: devapisuperapp.cbe.com.et

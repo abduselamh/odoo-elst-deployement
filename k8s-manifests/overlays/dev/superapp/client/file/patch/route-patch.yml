@@ -5,7 +5,7 @@ metadata:
 spec:
   path: /api/v1/cbesuperapp/file_server
   to:
-    name: file-server
+    name: file-server-dev
     weight: 100
     kind: Service
   host: devapisuperapp.cbe.com.et
@@ -19,7 +19,7 @@ metadata:
 spec:
   path: /api/v1/cbesuperapp/pdf_server
   to:
-    name: pdf-server
+    name: pdf-server-dev
     weight: 100
     kind: Service
   host: devapisuperapp.cbe.com.et

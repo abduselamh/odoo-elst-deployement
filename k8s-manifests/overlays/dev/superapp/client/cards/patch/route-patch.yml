@@ -5,7 +5,7 @@ metadata:
 spec:
   path: /api/v1/cbesuperapp/card
   to:
-    name: virtual-card
+    name: virtual-card-dev
     weight: 100
     kind: Service
   host: devapisuperapp.cbe.com.et
@@ -19,7 +19,7 @@ metadata:
 spec:
   path: /api/v1/cbesuperapp/voucher
   to:
-    name: voucher
+    name: voucher-dev
     weight: 100
     kind: Service
   host: devapisuperapp.cbe.com.et
@@ -33,7 +33,7 @@ metadata:
 spec:
   path: /api/v1/cbesuperapp/standing_order
   to:
-    name: standing-order
+    name: standing-order-dev
     weight: 100
     kind: Service
   host: devapisuperapp.cbe.com.et

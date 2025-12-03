@@ -5,7 +5,7 @@ metadata:
 spec:
   path: /api/v1/cbesuperapp/exchange_rate
   to:
-    name: exchange-rate
+    name: exchange-rate-dev
     weight: 100
     kind: Service
   host: devapisuperapp.cbe.com.et
@@ -19,7 +19,7 @@ metadata:
 spec:
   path: /api/v1/cbesuperapp/news
   to:
-    name: news
+    name: news-dev
     weight: 100
     kind: Service
   host: devapisuperapp.cbe.com.et
