@@ -5,8 +5,6 @@ namespace: ocpsuperapp-dev
 resources:
   - ../../../../base/superapp/services/bps-auth
   - ../../../../base/superapp/services/bps-action
-  - ../../../../base/superapp/services/api-proxy
-  - ../../../../base/superapp/services/jenkins-hook
 
 
 patches:
