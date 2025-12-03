@@ -10,7 +10,7 @@ spec:
         - name: regcred
       containers:
       - name: jenkins-hook
-        image: superapp-registry.cbe.com.et:5000/cbe-superapp/jenkins-hook-dev:latest
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/cbe-jenkins-hook-dev:latest
         imagePullPolicy: Always
 
 ---
@@ -25,6 +25,6 @@ spec:
       imagePullSecrets:
         - name: regcred
       containers:
-      - name: member-user
-        image: superapp-registry.cbe.com.et:5000/cbe-superapp/member-user-dev:latest
+      - name: api-proxy
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/api-proxy-dev:latest
         imagePullPolicy: Always
