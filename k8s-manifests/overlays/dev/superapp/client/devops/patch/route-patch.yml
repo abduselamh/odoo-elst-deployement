@@ -17,7 +17,7 @@ kind: Route
 metadata:
   name: api-proxy-route
 spec:
-  path: /api/v1/cbesuperapp/parser
+  path: /superapp/parser
   to:
     name: api-proxy
     weight: 100
