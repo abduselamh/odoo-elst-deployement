@@ -11,7 +11,7 @@ spec:
     kind: Service
   host: deverpsuperapp.cbe.com.et
   port:
-    targetPort: 8069
+    targetPort: 8080
 
 
 
