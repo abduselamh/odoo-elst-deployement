@@ -1,0 +1,15 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: scurity-encryption
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: scurity-encryption
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/scurity-encryption-dev
+        imagePullPolicy: Always
+

@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: scurity-encryption
+  labels:
+    app:  scurity-encryption
+    project: cbe-superapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app:  scurity-encryption
+  template:
+    metadata:
+      labels:
+        app:  scurity-encryption
+        project: cbe-superapp
+    spec:
+      imagePullSecrets:
+        - name: regcred 
+      containers:
+      - name:  scurity-encryption
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/scurity-encryption-dev:latest
+        imagePullPolicy: Always
+        ports:
+          - containerPort: 8080
+        envFrom:
+          - configMapRef:
+              name: superapp-env-configmap
