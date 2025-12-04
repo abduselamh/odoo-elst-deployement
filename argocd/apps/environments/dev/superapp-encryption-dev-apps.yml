@@ -9,7 +9,7 @@ spec:
   sources:
     - repoURL: https://gitlab.cbe.com.et/NatnaelTadesse/cbe-superapp-deployment.git
       targetRevision: master
-      path: k8s-manifests/overlays/dev/superapp/encryption  
+      path: k8s-manifests/overlays/dev/superapp/security-encryption
         #directory: 
         #recurse: false
       kustomize: {}

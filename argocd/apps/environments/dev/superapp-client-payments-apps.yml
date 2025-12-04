@@ -9,7 +9,7 @@ spec:
   sources:
     - repoURL: https://gitlab.cbe.com.et/NatnaelTadesse/cbe-superapp-deployment.git
       targetRevision: master
-      path: k8s-manifests/overlays/dev/superapp/client/payment
+      path: k8s-manifests/overlays/dev/superapp/client/payments
         #directory: 
         #recurse: false
       kustomize: {}
