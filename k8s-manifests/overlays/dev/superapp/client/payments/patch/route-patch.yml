@@ -4,14 +4,14 @@ metadata:
   name: split-payment-route
 
 spec:
-  path: /
+  path: /api/v1/cbesuperapp/split_payment
   to:
     name: split-payment-dev
     weight: 100
     kind: Service
   host: deverpsuperapp.cbe.com.et
   port:
-    targetPort: 8069
+    targetPort: 8080
 
 
 
