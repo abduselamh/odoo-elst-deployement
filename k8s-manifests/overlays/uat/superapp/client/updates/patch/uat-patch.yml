@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: exchange-rate
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: exchange-rate
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/exchange-rate-uat:latest
+        imagePullPolicy: Always
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: news
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: news
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/news-uat:latest
+        imagePullPolicy: Always

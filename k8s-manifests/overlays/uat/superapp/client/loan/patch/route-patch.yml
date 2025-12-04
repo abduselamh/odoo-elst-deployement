@@ -1,0 +1,13 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: yabex-route
+spec:
+  path: /api/v1/cbesuperapp/yabex
+  to:
+    name: yabex-uat
+    weight: 100
+    kind: Service
+  host: uatapisuperapp.cbe.com.et
+  port:
+    targetPort: 8080

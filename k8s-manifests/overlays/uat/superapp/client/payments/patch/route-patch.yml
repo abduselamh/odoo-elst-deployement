@@ -1,0 +1,19 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: split-payment-route
+
+spec:
+  path: /api/v1/cbesuperapp/split_payment
+  to:
+    name: split-payment-uat
+    weight: 100
+    kind: Service
+  host: uaterpsuperapp.cbe.com.et
+  port:
+    targetPort: 8080
+
+
+
+
+

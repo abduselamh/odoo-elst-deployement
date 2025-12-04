@@ -1,0 +1,13 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: notification-route
+spec:
+  path: /api/v1/cbesuperapp/notification
+  to:
+    name: notification-uat
+    weight: 100
+    kind: Service
+  host: uatapisuperapp.cbe.com.et
+  port:
+    targetPort: 8080

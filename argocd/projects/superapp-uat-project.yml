@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: cbe-superapp-uat
+  namespace: openshift-gitops
+spec:
+  sourceRepos:
+  - '*'
+  destinations:
+  - namespace: 'ocpsuperapp-dev'
+    server: '*'
+  - namespace: 'ocpsuperapp-qa'
+    server: '*'
+  - namespace: 'ocpsuperapp-uat'
+    server: '*'
+  - namespace: 'openshift-gitops'
+    server: '*'
+  clusterResourceWhitelist:
+  - group: '*'
+    kind: '*'
+    
