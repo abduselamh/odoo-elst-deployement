@@ -3,7 +3,7 @@ kind: Kustomization
 namespace: ocpsuperapp-dev
 
 resources:
-  - ../../../../base/superapp/services/encryption
+  - ../../../../base/superapp/services/security-encryption
 
 
 

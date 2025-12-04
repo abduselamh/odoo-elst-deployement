@@ -3,7 +3,7 @@ kind: Kustomization
 namespace: ocpsuperapp-dev
 
 resources:
-  - ../../../../base/superapp/services/split-payment
+  - ../../../../../base/superapp/services/split-payment
 
 
 
