@@ -15,11 +15,11 @@ spec:
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
-  name: topup-route-dev
+  name: topup-route
 spec:
   path: /api/v1/cbesuperapp/topup
   to:
-    name: topup
+    name: topup-dev
     weight: 100
     kind: Service
   host: devapisuperapp.cbe.com.et
