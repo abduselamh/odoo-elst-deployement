@@ -4,7 +4,7 @@ metadata:
   name: split-payment-route
 
 spec:
-  path: /
+  path: /api/v1/cbesuperapp/split_payment
   to:
     name: split-payment-dev
     weight: 100
