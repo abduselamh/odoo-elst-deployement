@@ -4,4 +4,4 @@ kind: Kustomization
 resources:
   - ../../../router
 
-namePrefix: bps-action-
+namePrefix: mini-app-
