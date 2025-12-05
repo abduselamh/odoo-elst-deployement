@@ -3,7 +3,7 @@ kind: Route
 metadata:
   name: file-server-route
 spec:
-  path: /api/v1/cbesuperapp/file_server
+  path: /api/v1/cbesuperapp/files
   to:
     name: file-server-dev
     weight: 100

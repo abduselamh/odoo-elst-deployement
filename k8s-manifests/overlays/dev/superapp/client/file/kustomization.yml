@@ -4,7 +4,7 @@ namespace: ocpsuperapp-dev
 
 resources:
   - ../../../../../base/superapp/services/file-server
-  - ../../../../../base/superapp/services/pdf-server
+  - ../../../../../base/superapp/services/pdf
 
 patches:
   - path: patch/dev-patch.yml
