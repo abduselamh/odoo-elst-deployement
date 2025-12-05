@@ -11,3 +11,11 @@ patches:
   - path: patch/route-patch.yml
 
 nameSuffix: -dev
+
+
+
+images:
+  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/utility-dev
+    newTag: latest
+  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/utility-parser-dev
+    newTag: latest

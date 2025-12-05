@@ -11,3 +11,9 @@ patches:
   - path: patch/route-patch.yml
 
 nameSuffix: -dev
+
+images:
+  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/cbe-to-wallet-dev
+    newTag: latest
+  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/topup-dev
+    newTag: latest
