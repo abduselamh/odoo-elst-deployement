@@ -6,10 +6,10 @@ metadata:
 spec:
   path: /api/v1/cbesuperapp/split_payment
   to:
-    name: split-payment-dev
+    name: split-payment-qa
     weight: 100
     kind: Service
-  host: devapisuperapp.cbe.com.et
+  host: qaapisuperapp.cbe.com.et
   port:
     targetPort: 8080
 
@@ -23,10 +23,10 @@ metadata:
 spec:
   path: /api/v1/cbesuperapp/mini-apps
   to:
-    name: mini-app-dev
+    name: mini-app-qa
     weight: 100
     kind: Service
-  host: devapisuperapp.cbe.com.et
+  host: qaapisuperapp.cbe.com.et
   port:
     targetPort: 8080
 

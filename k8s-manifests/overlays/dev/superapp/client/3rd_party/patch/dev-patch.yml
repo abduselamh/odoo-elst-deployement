@@ -28,3 +28,19 @@ spec:
       - name: topup
         image: superapp-registry.cbe.com.et:5000/cbe-superapp/topup-dev:latest
         imagePullPolicy: Always
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: donation
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: donation
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/donation-dev:latest
+        imagePullPolicy: Always
+

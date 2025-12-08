@@ -5,6 +5,7 @@ namespace: ocpsuperapp-dev
 resources:
   - ../../../../../base/superapp/services/cbe-to-wallet
   - ../../../../../base/superapp/services/topup
+  - ../../../../../base/superapp/services/donation
 
 patches:
   - path: patch/dev-patch.yml
