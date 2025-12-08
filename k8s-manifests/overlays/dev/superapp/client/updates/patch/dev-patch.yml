@@ -28,3 +28,20 @@ spec:
       - name: news
         image: superapp-registry.cbe.com.et:5000/cbe-superapp/news-dev:latest
         imagePullPolicy: Always
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: chat
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: chat
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/chat-dev:latest
+        imagePullPolicy: Always

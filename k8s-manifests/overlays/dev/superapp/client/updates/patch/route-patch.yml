@@ -11,7 +11,9 @@ spec:
   host: devapisuperapp.cbe.com.et
   port:
     targetPort: 8080
+
 ---
+
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
@@ -25,3 +27,20 @@ spec:
   host: devapisuperapp.cbe.com.et
   port:
     targetPort: 8080
+
+---
+
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: chat-route
+spec:
+  path: /api/v1/cbesuperapp/chat
+  to:
+    name: chat-dev
+    weight: 100
+    kind: Service
+  host: devapisuperapp.cbe.com.et
+  port:
+    targetPort: 8080
+

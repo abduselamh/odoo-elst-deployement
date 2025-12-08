@@ -5,6 +5,7 @@ namespace: ocpsuperapp-dev
 resources:
   - ../../../../../base/superapp/services/news
   - ../../../../../base/superapp/services/exchange-rate
+  - ../../../../../base/superapp/services/chat
 
 patches:
   - path: patch/dev-patch.yml
@@ -17,4 +18,6 @@ images:
   - name: superapp-registry.cbe.com.et:5000/cbe-superapp/news-dev
     newTag: latest
   - name: superapp-registry.cbe.com.et:5000/cbe-superapp/exchange-rate-dev
+    newTag: latest
+  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/chat-dev
     newTag: latest

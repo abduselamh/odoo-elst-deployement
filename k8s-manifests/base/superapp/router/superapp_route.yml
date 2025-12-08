@@ -3,9 +3,9 @@ kind: Route
 metadata:
   name: route
 spec:
-  path: /api/v1/cbesuperapp/bps_auth
+  path: /api/v1/cbesuperapp/default-path
   to:
-    name: transaction-dev
+    name: default-svc
     weight: 100
     kind: Service
   host: devapisuperapp.cbe.com.et
