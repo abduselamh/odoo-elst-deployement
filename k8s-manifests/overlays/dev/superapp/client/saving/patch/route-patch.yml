@@ -3,7 +3,7 @@ kind: Route
 metadata:
   name: equb-route
 spec:
-  path: /api/v1/cbesuperapp/cbe_to_wallet
+  path: /api/v1/cbesuperapp/equbs
   to:
     name: equb-dev
     weight: 100
