@@ -17,7 +17,7 @@ kind: Route
 metadata:
   name: budget-route
 spec:
-  path: /api/v1/cbesuperapp/budget
+  path: /api/v1/cbesuperapp/budget-management
   to:
     name: budget-qa
     weight: 100
