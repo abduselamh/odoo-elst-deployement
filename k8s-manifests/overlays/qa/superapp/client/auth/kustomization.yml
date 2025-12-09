@@ -4,6 +4,7 @@ namespace: ocpsuperapp-qa
 
 resources:
   - ../../../../../base/superapp/services/member-auth
+  - ../../../../../base/superapp/services/ussd-auth
   - ../../../../../base/superapp/services/member-user
   - ../../../../../base/superapp/services/fayda
   - ../../../../../base/superapp/services/migration
@@ -18,6 +19,8 @@ images:
   - name: superapp-registry.cbe.com.et:5000/cbe-superapp/member-auth-qa
     newTag: latest
   - name: superapp-registry.cbe.com.et:5000/cbe-superapp/member-user-qa
+    newTag: latest
+  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/ussd-auth-qa
     newTag: latest
   - name: superapp-registry.cbe.com.et:5000/cbe-superapp/fayda-qa
     newTag: latest
