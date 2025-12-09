@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ussd-auth
+  labels:
+    app:  ussd-auth
+    project: cbe-superapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app:  ussd-auth
+  template:
+    metadata:
+      labels:
+        app:  ussd-auth
+        project: cbe-superapp
+    spec:
+      imagePullSecrets:
+        - name: regcred 
+      containers:
+      - name:  ussd-auth
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/ussd-auth-dev:latest
+        imagePullPolicy: Always
+        ports:
+          - containerPort: 8080
+        envFrom:
+          - configMapRef:
+              name: superapp-env-configmap
