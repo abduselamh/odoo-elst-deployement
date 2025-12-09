@@ -3,7 +3,7 @@ kind: Route
 metadata:
   name: cbe-to-wallet-route
 spec:
-  path: /api/v1/cbesuperapp/cbe-to-wallet
+  path: /api/v1/cbesuperapp/cbe_to_wallet
   to:
     name: cbe-to-wallet-qa
     weight: 100
