@@ -45,7 +45,7 @@ kind: Route
 metadata:
   name: common-api-route
 spec:
-  path: /api/v1/cbesuperapp/common_api
+  path: /api/v1/cbesuperapp/tokenizer
   to:
     name: common-api-qa
     weight: 100
