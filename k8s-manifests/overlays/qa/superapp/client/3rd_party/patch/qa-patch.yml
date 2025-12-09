@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cbe-to-wallet
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: cbe-to-wallet
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/cbe-to-wallet-qa:latest
+        imagePullPolicy: Always
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: topup
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: topup
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/topup-qa:latest
+        imagePullPolicy: Always
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: donation
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: donation
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/donation-qa:latest
+        imagePullPolicy: Always
+

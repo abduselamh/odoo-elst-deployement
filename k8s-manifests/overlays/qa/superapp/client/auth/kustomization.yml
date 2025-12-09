@@ -8,11 +8,18 @@ resources:
   - ../../../../../base/superapp/services/fayda
   - ../../../../../base/superapp/services/migration
 
-
-
-
 patches:
-  - path: patch/patch.yml
+  - path: patch/qa-patch.yml
   - path: patch/route-patch.yml
 
 nameSuffix: -qa
+
+images:
+  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/member-auth-qa
+    newTag: latest
+  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/member-user-qa
+    newTag: latest
+  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/fayda-qa
+    newTag: latest
+  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/migration-qa
+    newTag: latest

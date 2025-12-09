@@ -1,46 +1,41 @@
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
-  name: exchange-rate-route
+  name: virtual-card-route
 spec:
-  path: /api/v1/cbesuperapp/exchange_rate
+  path: /api/v1/cbesuperapp/card
   to:
-    name: exchange-rate-qa
+    name: virtual-card-qa
     weight: 100
     kind: Service
   host: qaapisuperapp.cbe.com.et
   port:
     targetPort: 8080
-
 ---
-
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
-  name: news-route
+  name: voucher-route
 spec:
-  path: /api/v1/cbesuperapp/news
+  path: /api/v1/cbesuperapp/voucher
   to:
-    name: news-qa
+    name: voucher-qa
     weight: 100
     kind: Service
   host: qaapisuperapp.cbe.com.et
   port:
     targetPort: 8080
-
 ---
-
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
-  name: chat-route
+  name: standing-order-route
 spec:
-  path: /api/v1/cbesuperapp/chat
+  path: /api/v1/cbesuperapp/standing_order
   to:
-    name: chat-qa
+    name: standing-order-qa
     weight: 100
     kind: Service
   host: qaapisuperapp.cbe.com.et
   port:
     targetPort: 8080
-

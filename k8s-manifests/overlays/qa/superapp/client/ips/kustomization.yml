@@ -3,8 +3,7 @@ kind: Kustomization
 namespace: ocpsuperapp-qa
 
 resources:
-  - ../../../../../base/superapp/services/yabex
-
+  - ../../../../../base/superapp/services/ips
 patches:
   - path: patch/qa-patch.yml
   - path: patch/route-patch.yml
@@ -12,5 +11,5 @@ patches:
 nameSuffix: -qa
 
 images:
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/yabex-qa
+  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/ips-qa
     newTag: latest

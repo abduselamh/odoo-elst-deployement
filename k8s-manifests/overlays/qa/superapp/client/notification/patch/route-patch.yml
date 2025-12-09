@@ -1,11 +1,11 @@
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
-  name: yabex-route
+  name: notification-route
 spec:
-  path: /api/v1/cbesuperapp/yabex
+  path: /api/v1/cbesuperapp/notification
   to:
-    name: yabex-qa
+    name: notification-qa
     weight: 100
     kind: Service
   host: qaapisuperapp.cbe.com.et

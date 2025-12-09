@@ -1,0 +1,62 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: member-auth
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: member-auth
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/member-auth-qa:latest
+        imagePullPolicy: Always
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: member-user
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: member-user
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/member-user-qa:latest
+        imagePullPolicy: Always
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fayda
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: fayda
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/fayda-qa:latest
+        imagePullPolicy: Always
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: migration
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: migration
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/migration-qa:latest
+        imagePullPolicy: Always

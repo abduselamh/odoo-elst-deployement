@@ -1,11 +1,11 @@
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
-  name: member-auth-route
+  name: transaction-route
 spec:
-  path: /api/v1/cbesuperapp/member_auth
+  path: /api/v1/cbesuperapp/transaction
   to:
-    name: member-auth-qa
+    name: transaction-qa
     weight: 100
     kind: Service
   host: qaapisuperapp.cbe.com.et
@@ -15,11 +15,11 @@ spec:
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
-  name: member-user-route
+  name: cbe-to-cbe-route
 spec:
-  path: /api/v1/cbesuperapp/member_user
+  path: /api/v1/cbesuperapp/cbe_to_cbe
   to:
-    name: member-user-qa
+    name: cbe-to-cbe-qa
     weight: 100
     kind: Service
   host: qaapisuperapp.cbe.com.et
@@ -29,11 +29,11 @@ spec:
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
-  name: fayda-route
+  name: money-request-route
 spec:
-  path: /api/v1/cbesuperapp/fayda
+  path: /api/v1/cbesuperapp/money_request
   to:
-    name: fayda-qa
+    name: money-request-qa
     weight: 100
     kind: Service
   host: qaapisuperapp.cbe.com.et
@@ -43,11 +43,11 @@ spec:
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
-  name: migration-route
+  name: common-api-route
 spec:
-  path: /api/v1/cbesuperapp/migration
+  path: /api/v1/cbesuperapp/common_api
   to:
-    name: migration-qa
+    name: common-api-qa
     weight: 100
     kind: Service
   host: qaapisuperapp.cbe.com.et
