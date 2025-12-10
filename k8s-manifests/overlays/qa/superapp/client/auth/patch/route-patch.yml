@@ -61,7 +61,7 @@ kind: Route
 metadata:
   name: ussd-auth-route
 spec:
-  path: /api/v1/cbesuperapp/ussd/auth
+  path: /api/v1/cbesuperapp/ussd_auth
   to:
     name: ussd-auth-qa
     weight: 100
