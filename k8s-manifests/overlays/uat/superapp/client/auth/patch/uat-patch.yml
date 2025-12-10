@@ -60,3 +60,19 @@ spec:
       - name: migration
         image: superapp-registry.cbe.com.et:5000/cbe-superapp/migration-uat:latest
         imagePullPolicy: Always
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ussd-auth
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: ussd-auth
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/ussd-auth-uat:latest
+        imagePullPolicy: Always   
