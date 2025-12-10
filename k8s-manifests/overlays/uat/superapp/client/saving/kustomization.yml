@@ -12,3 +12,12 @@ patches:
   - path: patch/route-patch.yml
 
 nameSuffix: -uat
+
+
+images:
+  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/equb-uat
+    newTag: latest
+  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/budget-uat
+    newTag: latest
+  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/vault-uat
+    newTag: latest

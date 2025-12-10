@@ -1,11 +1,11 @@
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
-  name: cbe-to-wallet-route
+  name: equb-route
 spec:
-  path: /api/v1/cbesuperapp/cbe_to_wallet
+  path: /api/v1/cbesuperapp/equbs
   to:
-    name: cbe-to-wallet-uat
+    name: equb-uat
     weight: 100
     kind: Service
   host: uatapisuperapp.cbe.com.et
@@ -15,11 +15,26 @@ spec:
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
-  name: topup-route
+  name: budget-route
 spec:
-  path: /api/v1/cbesuperapp/topup
+  path: /api/v1/cbesuperapp/budget-management
   to:
-    name: topup-uat
+    name: budget-uat
+    weight: 100
+    kind: Service
+  host: uatapisuperapp.cbe.com.et
+  port:
+    targetPort: 8080
+
+---
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: vault-route
+spec:
+  path: /api/v1/cbesuperapp/vault
+  to:
+    name: vault-uat
     weight: 100
     kind: Service
   host: uatapisuperapp.cbe.com.et
