@@ -3,7 +3,6 @@ kind: Kustomization
 namespace: ocpsuperapp-uat
 
 resources:
-  - ../../../../../base/superapp/services/file-server
   - ../../../../../base/superapp/services/pdf
 
 patches:

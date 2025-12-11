@@ -1,17 +1,4 @@
-apiVersion: route.openshift.io/v1
-kind: Route
-metadata:
-  name: file-server-route
-spec:
-  path: /api/v1/cbesuperapp/files
-  to:
-    name: file-server-qa
-    weight: 100
-    kind: Service
-  host: qaapisuperapp.cbe.com.et
-  port:
-    targetPort: 8080
----
+
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:

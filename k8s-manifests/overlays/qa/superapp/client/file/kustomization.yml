@@ -3,7 +3,6 @@ kind: Kustomization
 namespace: ocpsuperapp-qa
 
 resources:
-  - ../../../../../base/superapp/services/file-server
   - ../../../../../base/superapp/services/pdf
 
 patches:
@@ -13,7 +12,5 @@ patches:
 nameSuffix: -qa
 
 images:
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/file-server-qa
-    newTag: latest
   - name: superapp-registry.cbe.com.et:5000/cbe-superapp/pdf-server-qa
     newTag: latest
