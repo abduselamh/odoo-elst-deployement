@@ -35,7 +35,7 @@ pipeline {
         stage('Push to GitLab') {
             steps {
                 // Push all refs to GitLab using credentials
-                withCredentials([usernamePassword(credentialsId: env.GITLAB_CRED, usernameVariable: 'GL_USER', passwordVariable: 'GL_PASS')]) {
+                withCredentials([usernamePassword(credentialsId: 'GITLAB_CRED', usernameVariable: 'GL_USER', passwordVariable: 'GL_PASS')]) {
                     sh "git remote add gitlab https://${GL_USER}:${GL_PASS}@${GITLAB_REPO.replace('https://', '')}"
                     sh 'git push gitlab --mirror'
                 }
