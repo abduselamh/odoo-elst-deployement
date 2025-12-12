@@ -21,10 +21,17 @@ pipeline {
     stages {
         stage('Clone GitHub Repo') {
             steps {
-                // Clean workspace before cloning
-                deleteDir()
-                // Clone the GitHub repository using credentials
-                git url: env.GITHUB_REPO, credentialsId: env.GITHUB_CRED
+                // Clone the GitHub repository using a Personal Access Token (PAT)
+                checkout([
+                    $class: 'GitSCM',
+                    branches: [[name: '*/main']], // adjust if default branch is different
+                    doGenerateSubmoduleConfigurations: false,
+                    extensions: [],
+                    userRemoteConfigs: [[
+                        url: env.GITHUB_REPO,
+                        credentialsId: env.GITHUB_TOKEN
+                    ]]
+                ])
             }
         }
         stage('Push to GitLab') {
