@@ -14,8 +14,6 @@ pipeline {
         GITHUB_REPO = "https://github.com/natnael-ta/cbe-superapp-deployment.git"
         GITLAB_REPO = "https://gitlab.cbe.com.et/NatnaelTadesse/cbe-superapp-deployment.git"
         PROJECT_ROOT_PATH = "/data/cbe-super-app/"
-        GITHUB_CRED = credentials('GITHUB_CRED')
-        GITLAB_CRED = credentials('GITLAB_CRED')
     }
 
     stages {
