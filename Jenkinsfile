@@ -19,19 +19,19 @@ pipeline {
     }
 
     stages {
-        stage('Clone GitHub Repo') {
+       stage('Cloning Git') {
             steps {
-                // Clone the GitHub repository using a Personal Access Token (PAT)
-        checkout([
-            $class: 'GitSCM',
-            branches: [[name: '*/master']], // adjust if default branch differs
-            doGenerateSubmoduleConfigurations: false,
-            extensions: [],
-            userRemoteConfigs: [[
-                url: env.GITHUB_REPO,
-                credentialsId: 'GITHUB_CRED'
-            ]]
-        ])
+                checkout([
+                    $class: 'GitSCM', 
+                    branches: [[name: "*/master"]], 
+                    doGenerateSubmoduleConfigurations: false, 
+                    extensions: [], 
+                    submoduleCfg: [], 
+                    userRemoteConfigs: [[
+                        credentialsId:  'GITHUB_CRED', 
+                        url: env.GITHUB_REPO
+                    ]]
+                ])  
             }
         }
         stage('Push to GitLab') {
