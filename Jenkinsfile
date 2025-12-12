@@ -24,7 +24,7 @@ pipeline {
                 // Clone the GitHub repository using a Personal Access Token (PAT)
                 checkout([
                     $class: 'GitSCM',
-                    branches: [[name: '*/main']], // adjust if default branch is different
+                    branches: [[name: '*/master']], // using master as default branch
                     doGenerateSubmoduleConfigurations: false,
                     extensions: [],
                     userRemoteConfigs: [[
