@@ -14,8 +14,7 @@ pipeline {
         GITHUB_REPO = "https://github.com/natnael-ta/cbe-superapp-deployment.git"
         GITLAB_REPO = "https://gitlab.cbe.com.et/NatnaelTadesse/cbe-superapp-deployment.git"
         PROJECT_ROOT_PATH = "/data/cbe-super-app/"
-        GITHUB_USER = credentials('GITHUB_USER')
-        GITHUB_TOKEN = credentials('GITHUB_TOKEN')
+        GITHUB_CRED = credentials('GITHUB_CRED')
         GITLAB_CRED = credentials('GITLAB_CRED')
     }
 
@@ -30,7 +29,7 @@ pipeline {
             extensions: [],
             userRemoteConfigs: [[
                 url: env.GITHUB_REPO,
-                credentialsId: env.GITHUB_USER
+                credentialsId: env.GITHUB_CRED
             ]]
         ])
             }
