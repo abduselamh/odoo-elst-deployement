@@ -20,8 +20,6 @@ spec:
             subPath: odoo.conf
       volumes:
 
-
-
         - name: cbe-odoo-volume
           persistentVolumeClaim:
             claimName: cbe-odoo-pvc-qa
