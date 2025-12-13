@@ -55,9 +55,9 @@ stage('Sync & Push to GitLab') {
                 echo "Fetching latest changes from GitHub..."
                 git fetch origin --prune
 
-                echo "Resetting local master to origin/master..."
-                git checkout master
-                git reset --hard origin/master
+                echo "Checking out branch: $BRANCH_NAME"
+                git checkout -B "$BRANCH_NAME" "origin/$BRANCH_NAME"
+                git reset --hard "origin/$BRANCH_NAME"
 
                 echo "Fetching tags from GitHub..."
                 git fetch origin --tags --force
