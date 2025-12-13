@@ -78,6 +78,8 @@ stage('Sync & Push to GitLab') {
 
 
 
+    }
+
     post {
         success {
             sh """
