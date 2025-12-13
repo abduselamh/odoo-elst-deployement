@@ -37,9 +37,10 @@ pipeline {
                 // Push all refs to GitLab using credentials
                 withCredentials([usernamePassword(credentialsId: 'GITLAB_CRED', usernameVariable: 'GL_USER', passwordVariable: 'GL_PASS')]) {
                     // Push all branches and tags to GitLab (avoid hidden refs)
-                sh "git remote add gitlab https://${GL_USER}:${GL_PASS}@${GITLAB_REPO.replace('https://', '')}" 
-                sh "git push gitlab --force --all"
-                sh "git push gitlab --force --tags"
+                    sh "git remote remove gitlab || true"
+                    sh "git remote add gitlab https://${GL_USER}:${GL_PASS}@${GITLAB_REPO.replace('https://', '')}"
+                    sh "git push gitlab --force --all"
+                    sh "git push gitlab --force --tags" 
 
                 }
             }
