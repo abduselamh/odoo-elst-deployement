@@ -50,7 +50,7 @@ spec:
     name: migration-dev
     weight: 100
     kind: Service
-  # host: devapisuperapp.cbe.com.et
+  host: devapisuperapp.cbe.com.et
   port:
     targetPort: 8080
 
