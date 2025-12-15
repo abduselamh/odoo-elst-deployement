@@ -4,12 +4,10 @@ namespace: ocpsuperapp-qa
 
 resources:
   - ../../../../../base/superapp/services/ips
+
+
 patches:
-  - path: patch/qa-patch.yml
+  - path: patch/patch.yml
   - path: patch/route-patch.yml
 
 nameSuffix: -qa
-
-images:
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/ips-qa
-    newTag: latest

@@ -4,6 +4,8 @@ namespace: ocpsuperapp-uat
 
 resources:
   - ../../../../../base/superapp/services/ips
+
+
 patches:
   - path: patch/uat-patch.yml
   - path: patch/route-patch.yml
