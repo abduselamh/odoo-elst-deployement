@@ -8,7 +8,7 @@ spec:
     name: default-svc
     weight: 100
     kind: Service
-  host: devapisuperapp.cbe.com.et
+  # host: devapisuperapp.cbe.com.et
   tls:
     termination: edge
     certificate: |
