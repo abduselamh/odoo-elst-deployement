@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: split-payment
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: split-payment
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/split-payment-qa
+        imagePullPolicy: Always
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mini-app
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: mini-app
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/mini-app-qa
+        imagePullPolicy: Always
+

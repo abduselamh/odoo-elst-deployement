@@ -1,0 +1,19 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: ocpsuperapp-qa
+
+resources:
+  - ../../../../../base/superapp/services/file-server
+  - ../../../../../base/superapp/services/pdf
+
+patches:
+  - path: patch/qa-patch.yml
+  - path: patch/route-patch.yml
+
+nameSuffix: -staging
+
+images:
+  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/file-server-qa
+    newTag: latest
+  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/pdf-server-qa
+    newTag: latest

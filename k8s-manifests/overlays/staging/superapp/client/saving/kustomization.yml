@@ -1,0 +1,23 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: ocpsuperapp-qa
+
+resources:
+  - ../../../../../base/superapp/services/equb
+  - ../../../../../base/superapp/services/budget
+  - ../../../../../base/superapp/services/vault
+
+patches:
+  - path: patch/qa-patch.yml
+  - path: patch/route-patch.yml
+
+nameSuffix: -staging
+
+
+images:
+  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/equb-qa
+    newTag: latest
+  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/budget-qa
+    newTag: latest
+  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/vault-qa
+    newTag: latest
