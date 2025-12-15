@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: client-orchestrator
+  labels:
+    app:  client-orchestrator
+    project: cbe-superapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app:  client-orchestrator
+  template:
+    metadata:
+      labels:
+        app:  client-orchestrator
+        project: cbe-superapp
+    spec:
+      imagePullSecrets:
+        - name: regcred 
+      containers:
+      - name:  client-orchestrator
+        image: superapp-registry.cbe.com.et:5000/cbe-superapp/client-orchestrator-dev:latest
+        imagePullPolicy: Always
+        ports:
+          - containerPort: 8080
+        envFrom:
+          - configMapRef:
+              name: superapp-env-configmap

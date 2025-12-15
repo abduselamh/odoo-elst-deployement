@@ -1,0 +1,17 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: ocpsuperapp-dev
+
+resources:
+  - ../../../../../base/superapp/services/client-orchestrator
+
+
+patches:
+  - path: patch/dev-patch.yml
+  - path: patch/route-patch.yml
+
+nameSuffix: -dev
+
+images:
+  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/client-orchestrator-dev
+    newTag: latest
