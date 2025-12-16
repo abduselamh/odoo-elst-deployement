@@ -10,7 +10,7 @@ spec:
         - name: regcred
       containers:
       - name: member-auth
-        image: superapp-registry.cbe.com.et:5000/cbe-superapp/member-auth-uat:latest
+        image: harbor.cbe.com.et/cbe-superapp/member-auth-uat:latest
         imagePullPolicy: Always
 
 ---
@@ -26,7 +26,7 @@ spec:
         - name: regcred
       containers:
       - name: member-user
-        image: superapp-registry.cbe.com.et:5000/cbe-superapp/member-user-uat:latest
+        image: harbor.cbe.com.et/cbe-superapp/member-user-uat:latest
         imagePullPolicy: Always
 
 ---
@@ -42,7 +42,7 @@ spec:
         - name: regcred
       containers:
       - name: fayda
-        image: superapp-registry.cbe.com.et:5000/cbe-superapp/fayda-uat:latest
+        image: harbor.cbe.com.et/cbe-superapp/fayda-uat:latest
         imagePullPolicy: Always
 
 ---
@@ -58,7 +58,7 @@ spec:
         - name: regcred
       containers:
       - name: migration
-        image: superapp-registry.cbe.com.et:5000/cbe-superapp/migration-uat:latest
+        image: harbor.cbe.com.et/cbe-superapp/migration-uat:latest
         imagePullPolicy: Always
 
 ---
@@ -74,5 +74,5 @@ spec:
         - name: regcred
       containers:
       - name: ussd-auth
-        image: superapp-registry.cbe.com.et:5000/cbe-superapp/ussd-auth-uat:latest
+        image: harbor.cbe.com.et/cbe-superapp/ussd-auth-uat:latest
         imagePullPolicy: Always   

@@ -15,7 +15,7 @@ patches:
 nameSuffix: -qa
 
 images:
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/ecommerce-erp-qa
+  - name: harbor.cbe.com.et/cbe-superapp/ecommerce-erp-qa
     newTag: latest
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/ecommerce-qa
+  - name: harbor.cbe.com.et/cbe-superapp/ecommerce-qa
     newTag: latest

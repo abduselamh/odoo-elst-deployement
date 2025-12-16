@@ -13,7 +13,7 @@ patches:
 nameSuffix: -staging
 
 images:
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/file-server-qa
+  - name: harbor.cbe.com.et/cbe-superapp/file-server-qa
     newTag: latest
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/pdf-server-qa
+  - name: harbor.cbe.com.et/cbe-superapp/pdf-server-qa
     newTag: latest

@@ -20,7 +20,7 @@ spec:
         - name: regcred 
       containers:
       - name:  topup
-        image: superapp-registry.cbe.com.et:5000/cbe-superapp/topup-dev:latest
+        image: harbor.cbe.com.et/cbe-superapp/topup-dev:latest
         imagePullPolicy: Always
         ports:
           - containerPort: 8080

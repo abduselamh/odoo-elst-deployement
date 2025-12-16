@@ -14,5 +14,5 @@ patches:
 nameSuffix: -uat
 
 images:
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/split-payment-uat
+  - name: harbor.cbe.com.et/cbe-superapp/split-payment-uat
     newTag: latest

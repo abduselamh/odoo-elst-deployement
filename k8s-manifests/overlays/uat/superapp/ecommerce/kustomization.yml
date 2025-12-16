@@ -15,5 +15,5 @@ patches:
 nameSuffix: -uat
 
 images:
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/ecommerce-erp-uat
+  - name: harbor.cbe.com.et/cbe-superapp/ecommerce-erp-uat
     newTag: latest

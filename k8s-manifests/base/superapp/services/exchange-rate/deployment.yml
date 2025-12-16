@@ -20,7 +20,7 @@ spec:
         - name: regcred 
       containers:
       - name:  exchange-rate
-        image: superapp-registry.cbe.com.et:5000/cbe-superapp/exchange-rate-dev:latest
+        image: harbor.cbe.com.et/cbe-superapp/exchange-rate-dev:latest
         imagePullPolicy: Always
         ports:
           - containerPort: 8080

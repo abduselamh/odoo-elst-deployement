@@ -10,5 +10,5 @@ spec:
         - name: regcred
       containers:
       - name: ips
-        image: superapp-registry.cbe.com.et:5000/cbe-superapp/ips-qa:latest
+        image: harbor.cbe.com.et/cbe-superapp/ips-qa:latest
         imagePullPolicy: Always

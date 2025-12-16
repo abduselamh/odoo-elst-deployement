@@ -20,7 +20,7 @@ spec:
         - name: regcred 
       containers:
       - name:  member-user
-        image: superapp-registry.cbe.com.et:5000/cbe-superapp/member-user-dev:latest
+        image: harbor.cbe.com.et/cbe-superapp/member-user-dev:latest
         imagePullPolicy: Always
         ports:
           - containerPort: 8080

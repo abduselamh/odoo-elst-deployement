@@ -15,5 +15,5 @@ patches:
 nameSuffix: -qa
 
 images:
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/split-payment-qa
+  - name: harbor.cbe.com.et/cbe-superapp/split-payment-qa
     newTag: latest

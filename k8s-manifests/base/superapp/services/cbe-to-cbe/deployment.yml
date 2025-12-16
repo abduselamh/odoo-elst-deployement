@@ -20,7 +20,7 @@ spec:
         - name: regcred 
       containers:
       - name:  cbe-to-cbe
-        image: superapp-registry.cbe.com.et:5000/cbe-superapp/cbe-to-cbe-dev:latest
+        image: harbor.cbe.com.et/cbe-superapp/cbe-to-cbe-dev:latest
         imagePullPolicy: Always
         ports:
           - containerPort: 8080

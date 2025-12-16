@@ -11,5 +11,5 @@ patches:
 nameSuffix: -staging
 
 images:
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/ips-qa
+  - name: harbor.cbe.com.et/cbe-superapp/ips-qa
     newTag: latest

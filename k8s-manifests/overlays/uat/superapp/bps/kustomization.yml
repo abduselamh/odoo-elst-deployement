@@ -14,8 +14,8 @@ patches:
 nameSuffix: -uat
 
 images:
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/bps-auth-uat
+  - name: harbor.cbe.com.et/cbe-superapp/bps-auth-uat
     newTag: latest
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/bps-action-uat
+  - name: harbor.cbe.com.et/cbe-superapp/bps-action-uat
     newTag: latest
 

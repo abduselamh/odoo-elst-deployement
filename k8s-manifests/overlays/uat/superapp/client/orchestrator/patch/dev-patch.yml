@@ -10,5 +10,5 @@ spec:
         - name: regcred
       containers:
       - name: client-orchestrator
-        image: superapp-registry.cbe.com.et:5000/cbe-superapp/client-orchestrator-uat:latest
+        image: harbor.cbe.com.et/cbe-superapp/client-orchestrator-uat:latest
         imagePullPolicy: Always

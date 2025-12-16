@@ -14,7 +14,7 @@ patches:
 nameSuffix: -dev
 
 images:
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/cbe-to-wallet-dev
+  - name: harbor.cbe.com.et/cbe-superapp/cbe-to-wallet-dev
     newTag: latest
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/topup-dev
+  - name: harbor.cbe.com.et/cbe-superapp/topup-dev
     newTag: latest

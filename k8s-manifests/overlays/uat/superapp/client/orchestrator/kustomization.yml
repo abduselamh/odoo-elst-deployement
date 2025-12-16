@@ -13,5 +13,5 @@ patches:
 nameSuffix: -uat
 
 images:
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/client-orchestrator-uat
+  - name: harbor.cbe.com.et/cbe-superapp/client-orchestrator-uat
     newTag: latest

@@ -15,5 +15,5 @@ patches:
 nameSuffix: -dev
 
 images:
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/split-payment-dev
+  - name: harbor.cbe.com.et/cbe-superapp/split-payment-dev
     newTag: latest

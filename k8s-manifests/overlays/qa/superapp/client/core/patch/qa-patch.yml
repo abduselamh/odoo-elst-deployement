@@ -10,7 +10,7 @@ spec:
         - name: regcred
       containers:
       - name: transaction
-        image: superapp-registry.cbe.com.et:5000/cbe-superapp/transaction-qa:latest
+        image: harbor.cbe.com.et/cbe-superapp/transaction-qa:latest
         imagePullPolicy: Always
 
 ---
@@ -26,7 +26,7 @@ spec:
         - name: regcred
       containers:
       - name: cbe-to-cbe
-        image: superapp-registry.cbe.com.et:5000/cbe-superapp/cbe-to-cbe-qa:latest
+        image: harbor.cbe.com.et/cbe-superapp/cbe-to-cbe-qa:latest
         imagePullPolicy: Always
 
 ---
@@ -42,7 +42,7 @@ spec:
         - name: regcred
       containers:
       - name: money-request
-        image: superapp-registry.cbe.com.et:5000/cbe-superapp/money-request-qa:latest
+        image: harbor.cbe.com.et/cbe-superapp/money-request-qa:latest
         imagePullPolicy: Always
 
 ---
@@ -58,5 +58,5 @@ spec:
         - name: regcred
       containers:
       - name: common-api
-        image: superapp-registry.cbe.com.et:5000/cbe-superapp/common-api-qa:latest
+        image: harbor.cbe.com.et/cbe-superapp/common-api-qa:latest
         imagePullPolicy: Always

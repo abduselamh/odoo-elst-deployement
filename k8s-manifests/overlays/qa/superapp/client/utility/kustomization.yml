@@ -15,7 +15,7 @@ nameSuffix: -qa
 
 
 images:
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/utility-qa
+  - name: harbor.cbe.com.et/cbe-superapp/utility-qa
     newTag: latest
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/utility-parser-qa
+  - name: harbor.cbe.com.et/cbe-superapp/utility-parser-qa
     newTag: latest

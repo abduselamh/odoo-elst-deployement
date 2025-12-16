@@ -17,11 +17,11 @@ nameSuffix: -dev
 
 
 images:
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/transaction-dev
+  - name: harbor.cbe.com.et/cbe-superapp/transaction-dev
     newTag: latest
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/cbe-to-cbe-dev
+  - name: harbor.cbe.com.et/cbe-superapp/cbe-to-cbe-dev
     newTag: latest
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/money-request-dev
+  - name: harbor.cbe.com.et/cbe-superapp/money-request-dev
     newTag: latest
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/common-dev
+  - name: harbor.cbe.com.et/cbe-superapp/common-dev
     newTag: latest

@@ -20,7 +20,7 @@ spec:
         - name: regcred 
       containers:
       - name:  mini-app
-        image: superapp-registry.cbe.com.et:5000/cbe-superapp/mini-app-dev:latest
+        image: harbor.cbe.com.et/cbe-superapp/mini-app-dev:latest
         imagePullPolicy: Always
         ports:
           - containerPort: 8080

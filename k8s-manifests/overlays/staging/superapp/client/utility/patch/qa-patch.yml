@@ -10,7 +10,7 @@ spec:
         - name: regcred
       containers:
       - name: utility
-        image: superapp-registry.cbe.com.et:5000/cbe-superapp/utility-qa:latest
+        image: harbor.cbe.com.et/cbe-superapp/utility-qa:latest
         imagePullPolicy: Always
 
 ---
@@ -26,5 +26,5 @@ spec:
         - name: regcred
       containers:
       - name: utility-parser
-        image: superapp-registry.cbe.com.et:5000/cbe-superapp/utility-parser-qa:latest
+        image: harbor.cbe.com.et/cbe-superapp/utility-parser-qa:latest
         imagePullPolicy: Always

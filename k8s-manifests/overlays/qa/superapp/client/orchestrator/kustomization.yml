@@ -13,5 +13,5 @@ patches:
 nameSuffix: -qa
 
 images:
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/client-orchestrator-qa
+  - name: harbor.cbe.com.et/cbe-superapp/client-orchestrator-qa
     newTag: latest

@@ -20,7 +20,7 @@ spec:
         - name: regcred 
       containers:
       - name:  client-orchestrator
-        image: superapp-registry.cbe.com.et:5000/cbe-superapp/client-orchestrator-dev:latest
+        image: harbor.cbe.com.et/cbe-superapp/client-orchestrator-dev:latest
         imagePullPolicy: Always
         ports:
           - containerPort: 8080

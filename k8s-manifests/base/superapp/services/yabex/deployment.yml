@@ -20,7 +20,7 @@ spec:
         - name: regcred 
       containers:
       - name:  yabex
-        image: superapp-registry.cbe.com.et:5000/cbe-superapp/yabex-dev:latest
+        image: harbor.cbe.com.et/cbe-superapp/yabex-dev:latest
         imagePullPolicy: Always
         ports:
           - containerPort: 8080

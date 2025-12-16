@@ -20,7 +20,7 @@ spec:
         - name: regcred 
       containers:
       - name:  transaction
-        image: superapp-registry.cbe.com.et:5000/cbe-superapp/transaction-dev:latest
+        image: harbor.cbe.com.et/cbe-superapp/transaction-dev:latest
         imagePullPolicy: Always
         ports:
           - containerPort: 8080

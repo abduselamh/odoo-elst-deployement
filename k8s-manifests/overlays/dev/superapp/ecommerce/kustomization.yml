@@ -15,7 +15,7 @@ patches:
 nameSuffix: -dev
 
 images:
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/ecommerce-erp-dev
+  - name: harbor.cbe.com.et/cbe-superapp/ecommerce-erp-dev
     newTag: latest
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/ecommerce-dev
+  - name: harbor.cbe.com.et/cbe-superapp/ecommerce-dev
     newTag: latest

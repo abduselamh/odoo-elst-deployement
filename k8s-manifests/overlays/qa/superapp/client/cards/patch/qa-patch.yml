@@ -10,7 +10,7 @@ spec:
         - name: regcred
       containers:
       - name: virtual-card
-        image: superapp-registry.cbe.com.et:5000/cbe-superapp/virtual-card-qa:latest
+        image: harbor.cbe.com.et/cbe-superapp/virtual-card-qa:latest
         imagePullPolicy: Always
 
 ---
@@ -26,7 +26,7 @@ spec:
         - name: regcred
       containers:
       - name: voucher
-        image: superapp-registry.cbe.com.et:5000/cbe-superapp/voucher-qa:latest
+        image: harbor.cbe.com.et/cbe-superapp/voucher-qa:latest
         imagePullPolicy: Always
 ---
 apiVersion: apps/v1
@@ -41,5 +41,5 @@ spec:
         - name: regcred
       containers:
       - name: standing-order
-        image: superapp-registry.cbe.com.et:5000/cbe-superapp/standing-order-qa:latest
+        image: harbor.cbe.com.et/cbe-superapp/standing-order-qa:latest
         imagePullPolicy: Always

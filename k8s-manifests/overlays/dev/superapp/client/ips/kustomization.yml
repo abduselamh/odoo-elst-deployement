@@ -13,5 +13,5 @@ patches:
 nameSuffix: -dev
 
 images:
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/ips-dev
+  - name: harbor.cbe.com.et/cbe-superapp/ips-dev
     newTag: latest

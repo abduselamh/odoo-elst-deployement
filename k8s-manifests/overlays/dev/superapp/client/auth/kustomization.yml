@@ -16,13 +16,13 @@ patches:
 nameSuffix: -dev
 
 images:
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/member-auth-dev
+  - name: harbor.cbe.com.et/cbe-superapp/member-auth-dev
     newTag: latest
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/member-user-dev
+  - name: harbor.cbe.com.et/cbe-superapp/member-user-dev
     newTag: latest
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/ussd-auth-dev
+  - name: harbor.cbe.com.et/cbe-superapp/ussd-auth-dev
     newTag: latest
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/fayda-dev
+  - name: harbor.cbe.com.et/cbe-superapp/fayda-dev
     newTag: latest
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/migration-dev
+  - name: harbor.cbe.com.et/cbe-superapp/migration-dev
     newTag: latest

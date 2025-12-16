@@ -16,7 +16,7 @@ nameSuffix: -dev
 
 
 images:
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/cps-auth-dev
+  - name: harbor.cbe.com.et/cbe-superapp/cps-auth-dev
     newTag: latest
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/cps-action-dev
+  - name: harbor.cbe.com.et/cbe-superapp/cps-action-dev
     newTag: latest

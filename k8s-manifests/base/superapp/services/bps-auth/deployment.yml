@@ -20,7 +20,7 @@ spec:
         - name: regcred 
       containers:
       - name:  bps-auth
-        image: superapp-registry.cbe.com.et:5000/cbe-superapp/bps-auth-dev:latest
+        image: harbor.cbe.com.et/cbe-superapp/bps-auth-dev:latest
         imagePullPolicy: Always
         ports:
           - containerPort: 8080

@@ -15,9 +15,9 @@ nameSuffix: -qa
 
 
 images:
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/equb-qa
+  - name: harbor.cbe.com.et/cbe-superapp/equb-qa
     newTag: latest
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/budget-qa
+  - name: harbor.cbe.com.et/cbe-superapp/budget-qa
     newTag: latest
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/vault-qa
+  - name: harbor.cbe.com.et/cbe-superapp/vault-qa
     newTag: latest
