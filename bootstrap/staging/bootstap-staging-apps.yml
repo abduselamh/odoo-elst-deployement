@@ -14,13 +14,7 @@ spec:
         recurse: true
   destination:
     server: https://kubernetes.default.svc
-    namespaces:
-      - superapp-stg-kafka
-      - superapp-stg-redis
-      - superapp-stg-vault
-      - superapp-stg-bps
-      - superapp-stg-cps
-      - superapp-stg-client
+    namespace: openshift-gitops
   syncPolicy:
     automated:
       prune: true
