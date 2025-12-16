@@ -1,0 +1,27 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: cbe-superapp-stg
+  namespace: openshift-gitops
+spec:
+  sourceRepos:
+  - '*'
+  destinations:
+  - namespace: 'superapp-stg-kafka'
+    server: '*'
+  - namespace: 'superapp-stg-redis'
+    server: '*'
+  - namespace: 'superapp-stg-vault'
+    server: '*'
+  - namespace: 'openshift-gitops'
+    server: '*'
+  - namespace: 'superapp-stg-bps'
+    server: '*'
+  - namespace: 'superapp-stg-cps'
+    server: '*'
+  - namespace: 'superapp-stg-client'
+    server: '*'
+  clusterResourceWhitelist:
+  - group: '*'
+    kind: '*'
+    
