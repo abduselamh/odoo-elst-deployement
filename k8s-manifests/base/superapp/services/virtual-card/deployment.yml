@@ -20,7 +20,7 @@ spec:
         - name: regcred 
       containers:
       - name:  virtual-card
-        image: superapp-registry.cbe.com.et:5000/cbe-superapp/virtual-card-dev:latest
+        image: harbor.cbe.com.et/cbe-superapp/virtual-card-dev:latest
         imagePullPolicy: Always
         ports:
           - containerPort: 8080

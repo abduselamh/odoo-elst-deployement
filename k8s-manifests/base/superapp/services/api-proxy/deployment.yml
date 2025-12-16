@@ -20,7 +20,7 @@ spec:
         - name: regcred 
       containers:
       - name:  api-proxy
-        image: superapp-registry.cbe.com.et:5000/cbe-superapp/api-proxy-dev:latest
+        image: harbor.cbe.com.et/cbe-superapp/api-proxy-dev:latest
         imagePullPolicy: Always
         ports:
           - containerPort: 8080

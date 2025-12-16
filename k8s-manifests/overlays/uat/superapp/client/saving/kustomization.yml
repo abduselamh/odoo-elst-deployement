@@ -15,9 +15,9 @@ nameSuffix: -uat
 
 
 images:
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/equb-uat
+  - name: harbor.cbe.com.et/cbe-superapp/equb-uat
     newTag: latest
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/budget-uat
+  - name: harbor.cbe.com.et/cbe-superapp/budget-uat
     newTag: latest
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/vault-uat
+  - name: harbor.cbe.com.et/cbe-superapp/vault-uat
     newTag: latest

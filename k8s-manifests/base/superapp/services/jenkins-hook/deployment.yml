@@ -20,7 +20,7 @@ spec:
         - name: regcred 
       containers:
       - name:  jenkins-hook
-        image: superapp-registry.cbe.com.et:5000/cbe-superapp/cbe-jenkins-hook-dev:latest
+        image: harbor.cbe.com.et/cbe-superapp/cbe-jenkins-hook-dev:latest
         imagePullPolicy: Always
         ports:
           - containerPort: 8080

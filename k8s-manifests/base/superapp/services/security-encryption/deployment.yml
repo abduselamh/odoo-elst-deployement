@@ -20,7 +20,7 @@ spec:
         - name: regcred 
       containers:
       - name:  scurity-encryption
-        image: superapp-registry.cbe.com.et:5000/cbe-superapp/scurity-encryption-dev:latest
+        image: harbor.cbe.com.et/cbe-superapp/scurity-encryption-dev:latest
         imagePullPolicy: Always
         ports:
           - containerPort: 8080

@@ -16,13 +16,13 @@ patches:
 nameSuffix: -qa
 
 images:
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/member-auth-qa
+  - name: harbor.cbe.com.et/cbe-superapp/member-auth-qa
     newTag: latest
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/member-user-qa
+  - name: harbor.cbe.com.et/cbe-superapp/member-user-qa
     newTag: latest
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/ussd-auth-qa
+  - name: harbor.cbe.com.et/cbe-superapp/ussd-auth-qa
     newTag: latest
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/fayda-qa
+  - name: harbor.cbe.com.et/cbe-superapp/fayda-qa
     newTag: latest
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/migration-qa
+  - name: harbor.cbe.com.et/cbe-superapp/migration-qa
     newTag: latest

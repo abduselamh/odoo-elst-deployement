@@ -12,5 +12,5 @@ patches:
 nameSuffix: -dev
 
 images:
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/notification-dev
+  - name: harbor.cbe.com.et/cbe-superapp/notification-dev
     newTag: latest

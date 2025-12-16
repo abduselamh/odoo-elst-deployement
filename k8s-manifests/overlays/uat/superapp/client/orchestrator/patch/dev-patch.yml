@@ -1,0 +1,14 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: client-orchestrator
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: client-orchestrator
+        image: harbor.cbe.com.et/cbe-superapp/client-orchestrator-uat:latest
+        imagePullPolicy: Always

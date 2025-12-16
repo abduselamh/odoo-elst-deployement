@@ -10,7 +10,7 @@ spec:
         - name: regcred
       containers:
       - name: cbe-to-wallet
-        image: superapp-registry.cbe.com.et:5000/cbe-superapp/cbe-to-wallet-qa:latest
+        image: harbor.cbe.com.et/cbe-superapp/cbe-to-wallet-qa:latest
         imagePullPolicy: Always
 
 ---
@@ -26,7 +26,7 @@ spec:
         - name: regcred
       containers:
       - name: topup
-        image: superapp-registry.cbe.com.et:5000/cbe-superapp/topup-qa:latest
+        image: harbor.cbe.com.et/cbe-superapp/topup-qa:latest
         imagePullPolicy: Always
 ---
 apiVersion: apps/v1
@@ -41,6 +41,6 @@ spec:
         - name: regcred
       containers:
       - name: donation
-        image: superapp-registry.cbe.com.et:5000/cbe-superapp/donation-qa:latest
+        image: harbor.cbe.com.et/cbe-superapp/donation-qa:latest
         imagePullPolicy: Always
 

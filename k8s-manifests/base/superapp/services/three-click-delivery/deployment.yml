@@ -20,7 +20,7 @@ spec:
         - name: regcred 
       containers:
       - name:  three-click-delivery
-        image: superapp-registry.cbe.com.et:5000/cbe-superapp/three-click-delivery-dev:latest
+        image: harbor.cbe.com.et/cbe-superapp/three-click-delivery-dev:latest
         imagePullPolicy: Always
         ports:
           - containerPort: 8080

@@ -20,7 +20,7 @@ spec:
         - name: regcred 
       containers:
       - name:  donation
-        image: superapp-registry.cbe.com.et:5000/cbe-superapp/donation-dev:latest
+        image: harbor.cbe.com.et/cbe-superapp/donation-dev:latest
         imagePullPolicy: Always
         ports:
           - containerPort: 8080

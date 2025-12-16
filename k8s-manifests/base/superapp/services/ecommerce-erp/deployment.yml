@@ -20,7 +20,7 @@ spec:
         - name: regcred 
       containers:
       - name:  ecommerce-erp
-        image: superapp-registry.cbe.com.et:5000/cbe-superapp/ecommerce-erp-dev:latest
+        image: harbor.cbe.com.et/cbe-superapp/ecommerce-erp-dev:latest
         imagePullPolicy: Always
         ports:
           - containerPort: 8069

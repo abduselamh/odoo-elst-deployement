@@ -12,5 +12,5 @@ patches:
 nameSuffix: -qa
 
 images:
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/pdf-server-qa
+  - name: harbor.cbe.com.et/cbe-superapp/pdf-server-qa
     newTag: latest

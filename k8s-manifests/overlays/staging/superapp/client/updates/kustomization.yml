@@ -15,9 +15,9 @@ nameSuffix: -staging
 
 
 images:
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/news-qa
+  - name: harbor.cbe.com.et/cbe-superapp/news-qa
     newTag: latest
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/exchange-rate-qa
+  - name: harbor.cbe.com.et/cbe-superapp/exchange-rate-qa
     newTag: latest
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/chat-qa
+  - name: harbor.cbe.com.et/cbe-superapp/chat-qa
     newTag: latest

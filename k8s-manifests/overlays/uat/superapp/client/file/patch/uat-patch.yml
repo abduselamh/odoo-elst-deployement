@@ -10,5 +10,5 @@ spec:
         - name: regcred
       containers:
       - name: pdf-server
-        image: superapp-registry.cbe.com.et:5000/cbe-superapp/pdf-server-uat:latest
+        image: harbor.cbe.com.et/cbe-superapp/pdf-server-uat:latest
         imagePullPolicy: Always

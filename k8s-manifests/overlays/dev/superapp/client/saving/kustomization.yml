@@ -15,9 +15,9 @@ nameSuffix: -dev
 
 
 images:
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/equb-dev
+  - name: harbor.cbe.com.et/cbe-superapp/equb-dev
     newTag: latest
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/budget-dev
+  - name: harbor.cbe.com.et/cbe-superapp/budget-dev
     newTag: latest
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/vault-dev
+  - name: harbor.cbe.com.et/cbe-superapp/vault-dev
     newTag: latest

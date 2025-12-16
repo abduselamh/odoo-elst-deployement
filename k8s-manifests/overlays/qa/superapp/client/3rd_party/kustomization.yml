@@ -14,7 +14,7 @@ patches:
 nameSuffix: -qa
 
 images:
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/cbe-to-wallet-qa
+  - name: harbor.cbe.com.et/cbe-superapp/cbe-to-wallet-qa
     newTag: latest
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/topup-qa
+  - name: harbor.cbe.com.et/cbe-superapp/topup-qa
     newTag: latest

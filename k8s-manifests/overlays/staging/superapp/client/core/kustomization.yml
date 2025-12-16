@@ -17,11 +17,11 @@ nameSuffix: -staging
 
 
 images:
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/transaction-qa
+  - name: harbor.cbe.com.et/cbe-superapp/transaction-qa
     newTag: latest
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/cbe-to-cbe-qa
+  - name: harbor.cbe.com.et/cbe-superapp/cbe-to-cbe-qa
     newTag: latest
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/money-request-qa
+  - name: harbor.cbe.com.et/cbe-superapp/money-request-qa
     newTag: latest
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/common-qa
+  - name: harbor.cbe.com.et/cbe-superapp/common-qa
     newTag: latest

@@ -20,7 +20,7 @@ spec:
         - name: regcred 
       containers:
       - name:  budget
-        image: superapp-registry.cbe.com.et:5000/cbe-superapp/budget-dev:latest
+        image: harbor.cbe.com.et/cbe-superapp/budget-dev:latest
         imagePullPolicy: Always
         ports:
           - containerPort: 8080

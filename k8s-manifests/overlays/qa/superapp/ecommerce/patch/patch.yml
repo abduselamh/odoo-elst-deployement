@@ -10,7 +10,7 @@ spec:
         - name: regcred
       containers:
       - name: ecommerce-erp
-        image: superapp-registry.cbe.com.et:5000/cbe-superapp/ecommerce-erp-qa
+        image: harbor.cbe.com.et/cbe-superapp/ecommerce-erp-qa
         imagePullPolicy: Always
         volumeMounts:
           - mountPath: /var/lib/odoo
@@ -40,6 +40,6 @@ spec:
         - name: regcred
       containers:
       - name: ecommerce
-        image: superapp-registry.cbe.com.et:5000/cbe-superapp/ecommerce-qa
+        image: harbor.cbe.com.et/cbe-superapp/ecommerce-qa
         imagePullPolicy: Always
 

@@ -14,9 +14,9 @@ patches:
 nameSuffix: -staging
 
 images:
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/virtual-card-qa
+  - name: harbor.cbe.com.et/cbe-superapp/virtual-card-qa
     newTag: latest
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/voucher-qa
+  - name: harbor.cbe.com.et/cbe-superapp/voucher-qa
     newTag: latest
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/standing-order-qa
+  - name: harbor.cbe.com.et/cbe-superapp/standing-order-qa
     newTag: latest

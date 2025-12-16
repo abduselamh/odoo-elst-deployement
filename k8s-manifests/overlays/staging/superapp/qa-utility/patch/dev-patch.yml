@@ -10,5 +10,5 @@ spec:
         - name: regcred
       containers:
       - name: qa-utility
-        image: superapp-registry.cbe.com.et:5000/cbe-superapp/qa-utility-dev:latest
+        image: harbor.cbe.com.et/cbe-superapp/qa-utility-dev:latest
         imagePullPolicy: Always

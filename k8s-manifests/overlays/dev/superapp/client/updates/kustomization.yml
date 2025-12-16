@@ -15,9 +15,9 @@ nameSuffix: -dev
 
 
 images:
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/news-dev
+  - name: harbor.cbe.com.et/cbe-superapp/news-dev
     newTag: latest
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/exchange-rate-dev
+  - name: harbor.cbe.com.et/cbe-superapp/exchange-rate-dev
     newTag: latest
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/chat-dev
+  - name: harbor.cbe.com.et/cbe-superapp/chat-dev
     newTag: latest

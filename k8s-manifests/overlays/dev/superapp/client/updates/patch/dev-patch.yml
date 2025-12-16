@@ -10,7 +10,7 @@ spec:
         - name: regcred
       containers:
       - name: exchange-rate
-        image: superapp-registry.cbe.com.et:5000/cbe-superapp/exchange-rate-dev:latest
+        image: harbor.cbe.com.et/cbe-superapp/exchange-rate-dev:latest
         imagePullPolicy: Always
 
 ---
@@ -26,7 +26,7 @@ spec:
         - name: regcred
       containers:
       - name: news
-        image: superapp-registry.cbe.com.et:5000/cbe-superapp/news-dev:latest
+        image: harbor.cbe.com.et/cbe-superapp/news-dev:latest
         imagePullPolicy: Always
 
 ---
@@ -43,5 +43,5 @@ spec:
         - name: regcred
       containers:
       - name: chat
-        image: superapp-registry.cbe.com.et:5000/cbe-superapp/chat-dev:latest
+        image: harbor.cbe.com.et/cbe-superapp/chat-dev:latest
         imagePullPolicy: Always

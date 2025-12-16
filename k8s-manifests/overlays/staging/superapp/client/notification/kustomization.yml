@@ -12,5 +12,5 @@ patches:
 nameSuffix: -staging
 
 images:
-  - name: superapp-registry.cbe.com.et:5000/cbe-superapp/notification-qa
+  - name: harbor.cbe.com.et/cbe-superapp/notification-qa
     newTag: latest
