@@ -5,7 +5,7 @@ metadata:
   name: superapp-bootstrap-staging
   namespace: openshift-gitops
 spec:
-  project: cbe-superapp-staging
+  project: cbe-superapp-stg
   sources:
     - repoURL: https://gitlab.cbe.com.et/NatnaelTadesse/cbe-superapp-deployment.git
       targetRevision: master
