@@ -1,8 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata: 
-  name: superapp-env-configmap
-data:
-  VAULT_ADDR: ""
-  VAULT_TOKEN: ""
-  VAULT_PATH: ""

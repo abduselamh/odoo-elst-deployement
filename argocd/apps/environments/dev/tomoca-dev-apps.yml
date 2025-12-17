@@ -2,19 +2,20 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: erp-bootstrap-dev
+  name: erp-tomoca-dev
   namespace: openshift-gitops
 spec:
   project: cbe-erp-dev
   sources:
     - repoURL: https://github.com/abduselamh/odoo-elst-deployment.git
       targetRevision: master
-      path: argocd/apps/environments/dev        
-      directory:
-        recurse: true
+      path: k8s-manifests/overlays/dev/erp/tomoca  
+        #directory: 
+        #recurse: false
+      kustomize: {}
   destination:
     server: https://kubernetes.default.svc
-    namespace: erp-dev
+    namespace: ocperp-dev
   syncPolicy:
     automated:
       prune: true
