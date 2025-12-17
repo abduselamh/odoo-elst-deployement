@@ -95,4 +95,4 @@ A common best practice for GitOps is to use a **branch-per-environment** or **ma
 
 -----
 
-Would you like me to help draft a specific example of an Argo CD **Application manifest** for your environment?
+Would you like me to help draft a specific example of an Argo CD **Application manifest** for your environment?# odoo-elst-deployement
